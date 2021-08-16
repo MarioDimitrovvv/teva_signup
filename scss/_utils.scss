@@ -7,3 +7,26 @@
     url('../fonts/#{$file}/#{$file}.woff2') format('woff2');
   }
 }
+
+@mixin input-style {
+  height: 48px;
+  border-radius: 4px;
+  border: solid 1px #d6d6d6;
+  padding: 0 16px 0 0;
+
+  &:focus {
+      outline: 1px $purple;
+      border-color: $purple;
+      border-radius: 4px;
+      color: #424242;
+
+      &::placeholder {
+          color: transparent;
+      }
+  }
+
+  // Not working in Explorer...
+  &::placeholder {
+      color:#898989;
+  }
+}
