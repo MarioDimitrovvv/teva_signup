@@ -16,9 +16,42 @@
   src: url("../fonts/Afek-Thin/Afek-Thin.ttf") format("truetype"), url("../fonts/Afek-Thin/Afek-Thin.woff") format("woff"), url("../fonts/Afek-Thin/Afek-Thin.woff2") format("woff2");
 }
 
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
 h1 {
   color: #357875;
   font-family: 'Afek-DemiBold';
   font-size: 44px;
   font-weight: 600;
+}
+
+main {
+  width: 1440px;
+  height: 900px;
+  display: flex;
+}
+
+main .main-content {
+  background-color: aquamarine;
+}
+
+.background-image {
+  position: absolute;
+  width: 720px;
+  height: 900px;
+}
+
+.background-logo {
+  position: relative;
+  width: 147px;
+  height: 52px;
+  padding: 45px 531px 803px 42px;
+}
+
+section {
+  width: 720px;
+  height: 900px;
 }
