@@ -1,5 +1,8 @@
-$light-color: rgb(241, 116, 116);
+@import 'config';
 
 h1 {
-    background-color: $light-color;
+    color: $color;
+    font-family: 'Afek-DemiBold';
+    font-size: 44px;
+    font-weight: 600;
 }
