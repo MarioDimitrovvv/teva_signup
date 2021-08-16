@@ -1,27 +1,8 @@
+@import 'utils';
+
 $color: #357875;
 $font-stack: url('../fonts/Afek-Regular/Afek-Regular.woff');
 
-@font-face {
-    font-family: 'Afek-DemiBold';
-    src: url('../fonts/Afek-DemiBold/Afek-DemiBold.eot');
-    src: url('../fonts/Afek-DemiBold/Afek-DemiBold.ttf') format('truetype'),
-        url('../fonts/Afek-DemiBold/Afek-DemiBold.woff') format('woff'),
-        url('../fonts/Afek-DemiBold/Afek-DemiBold.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Afek';
-    src: url('../fonts/Afek-Regular/Afek-Regular.eot');
-    src: url('../fonts/Afek-Regular/Afek-Regular.ttf') format('truetype'),
-        url('../fonts/Afek-Regular/Afek-Regular.woff') format('woff'),
-        url('../fonts/Afek-Regular/Afek-Regular.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Afek-Thin';
-    src: url('../fonts/Afek-Thin/Afek-Thin.eot');
-    src: url('../fonts/Afek-Thin/Afek-Thin.ttf') format('truetype'),
-        url('../fonts/Afek-Thin/Afek-Thin.woff') format('woff'),
-        url('../fonts/Afek-Thin/Afek-Thin.woff2') format('woff2')
-    ;
-}
+@include font-face("Afek-Bold", "Afek-DemiBold");
+@include font-face("Afek", "Afek-Regular");
+@include font-face("Afek-Thin", "Afek-Thin");

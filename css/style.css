@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'Afek-DemiBold';
+  font-family: "Afek-Bold";
   src: url("../fonts/Afek-DemiBold/Afek-DemiBold.eot");
   src: url("../fonts/Afek-DemiBold/Afek-DemiBold.ttf") format("truetype"), url("../fonts/Afek-DemiBold/Afek-DemiBold.woff") format("woff"), url("../fonts/Afek-DemiBold/Afek-DemiBold.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Afek';
+  font-family: "Afek";
   src: url("../fonts/Afek-Regular/Afek-Regular.eot");
   src: url("../fonts/Afek-Regular/Afek-Regular.ttf") format("truetype"), url("../fonts/Afek-Regular/Afek-Regular.woff") format("woff"), url("../fonts/Afek-Regular/Afek-Regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Afek-Thin';
+  font-family: "Afek-Thin";
   src: url("../fonts/Afek-Thin/Afek-Thin.eot");
   src: url("../fonts/Afek-Thin/Afek-Thin.ttf") format("truetype"), url("../fonts/Afek-Thin/Afek-Thin.woff") format("woff"), url("../fonts/Afek-Thin/Afek-Thin.woff2") format("woff2");
 }
@@ -19,11 +19,12 @@
 body {
   display: flex;
   justify-content: space-around;
+  font-family: 'Afek';
 }
 
 h1 {
   color: #357875;
-  font-family: 'Afek-DemiBold';
+  font-family: 'Afek-Bold';
   font-size: 44px;
   font-weight: 600;
 }
@@ -34,8 +35,14 @@ main {
   display: flex;
 }
 
-main .main-content {
-  background-color: aquamarine;
+main .main-section {
+  border: #d6d6d6 1px solid;
+  max-width: 720px;
+  max-height: 900px;
+}
+
+main .main-section .main-content {
+  padding: 48px 113px;
 }
 
 .background-image {

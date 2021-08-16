@@ -1,13 +1,15 @@
 @import 'config';
+@import 'utils';
 
 body {
     display: flex;
     justify-content: space-around;
+    font-family: 'Afek';
 }
 
 h1 {
     color: $color;
-    font-family: 'Afek-DemiBold';
+    font-family: 'Afek-Bold';
     font-size: 44px;
     font-weight: 600;
 }
@@ -17,8 +19,13 @@ main {
     height: 900px;
     display: flex;
     
-    .main-content {
-        background-color: aquamarine;        
+    .main-section {
+        border: #d6d6d6 1px solid;
+        max-width: 720px;
+        max-height: 900px;
+        .main-content {
+            padding: 48px 113px;
+        }
     }
 }
 
@@ -27,7 +34,6 @@ main {
         position: absolute;
         width: 720px;
         height: 900px;
-        // object-fit: contain;
     }
     
     &-logo {
