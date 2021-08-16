@@ -20,13 +20,7 @@ body {
   display: flex;
   justify-content: space-around;
   font-family: 'Afek';
-}
-
-h1 {
-  color: #357875;
-  font-family: 'Afek-Bold';
-  font-size: 44px;
-  font-weight: 600;
+  font-size: 16px;
 }
 
 main {
@@ -35,14 +29,43 @@ main {
   display: flex;
 }
 
-main .main-section {
-  border: #d6d6d6 1px solid;
+.main-section {
+  border: solid 1px #d6d6d6;
   max-width: 720px;
   max-height: 900px;
 }
 
-main .main-section .main-content {
+.main-section .main-content {
   padding: 48px 113px;
+}
+
+.main-section .main-content header h1 {
+  color: #357875;
+  font-family: 'Afek-Bold';
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.main-section .main-content header p {
+  line-height: 1.63;
+  margin: 0;
+}
+
+.main-section .main-content form fieldset {
+  padding: 0;
+  border: none;
+  display: flex;
+  width: 494px;
+}
+
+.main-section .main-content form fieldset .name-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 21px 0 10px 24px;
+  width: 235px;
+  height: 91px;
 }
 
 .background-image {
@@ -61,4 +84,31 @@ main .main-section .main-content {
 section {
   width: 720px;
   height: 900px;
+}
+
+label {
+  line-height: 1.5;
+}
+
+input {
+  height: 48px;
+  border-radius: 4px;
+  border: solid 1px #d6d6d6;
+}
+
+input:focus {
+  outline: 1px #aa198d;
+  border-color: #aa198d;
+  border-radius: 4px;
+  padding-right: 11px;
+  color: #424242;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input::placeholder {
+  color: #898989;
+  padding: 15px 16px 15px 0;
 }
