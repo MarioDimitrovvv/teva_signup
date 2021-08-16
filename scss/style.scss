@@ -54,6 +54,15 @@ main {
                     height: 91px;
                 }
             }
+
+            & > label {
+                display: block;
+            }
+
+            & > input {
+                width: 478px;
+                margin-bottom: 25px;
+            }
         }
 
     }
@@ -86,17 +95,18 @@ label {
 }
 
 input {
+    // max-width: 468px;
     height: 48px;
     border-radius: 4px;
     border: solid 1px #d6d6d6;
+    padding: 0 16px 0 0;
 
     &:focus {
         outline: 1px $purple;
         border-color: $purple;
         border-radius: 4px;
-        padding-right: 11px;
         color: #424242;
-                
+
         &::placeholder {
             color: transparent;
         }
@@ -105,7 +115,6 @@ input {
     // Not working in Explorer...
     &::placeholder {
         color:#898989;
-        padding: 15px 16px 15px 0;
     }
 
 }
