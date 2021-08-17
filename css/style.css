@@ -16,14 +16,14 @@
   src: url("../fonts/Afek-Thin/Afek-Thin.ttf") format("truetype"), url("../fonts/Afek-Thin/Afek-Thin.woff") format("woff"), url("../fonts/Afek-Thin/Afek-Thin.woff2") format("woff2");
 }
 
-h1, .main-section .main-content header h1 {
+h1 {
   color: #357875;
   font-family: 'Afek-Bold';
   font-size: 44px;
   font-weight: 600;
 }
 
-p, .main-section .main-content header p {
+p {
   line-height: 1.63;
 }
 
@@ -136,23 +136,7 @@ main {
 }
 
 .main-section .main-content header p {
-  margin: 0;
-}
-
-.main-section .main-content form fieldset {
-  padding: 0;
-  border: none;
-  display: flex;
-  width: 494px;
-}
-
-.main-section .main-content form fieldset .name-field {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  margin: 21px 0 10px 24px;
-  width: 235px;
-  height: 91px;
+  margin-bottom: 21px;
 }
 
 .main-section .main-content form > div {
@@ -164,7 +148,29 @@ main {
 }
 
 .main-section .main-content form > div input {
-  width: 478px;
+  width: 476px;
+}
+
+.main-section .main-content form .row {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 494px;
+  margin-bottom: 0;
+  margin-left: 24px;
+}
+
+.main-section .main-content form .row .name-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-bottom: 10px;
+  width: 235px;
+  height: 91px;
+}
+
+.main-section .main-content form .row .name-field input {
+  width: 217px;
 }
 
 .main-section .main-content .description {

@@ -28,7 +28,7 @@
                         סיסמה לצורך כניסה לאתר</p>
                 </header>
                 <form method="POST">
-                    <fieldset>
+                    <div class="row">
                         <div class="name-field">
                             <label for="firstName">שם פרטי</label>
                             <input type="text" id="firstName" name="firstName" placeholder="שם פרטי">
@@ -37,7 +37,7 @@
                             <label for="secondName">שם משפחה</label>
                             <input type="text" id="secondName" name="secondName" placeholder="שם משפחה">
                         </div>
-                    </fieldset>
+                    </div>
                     <div>
                         <label for="email">אימייל</label>
                         <input type="email" id="email" name="email" placeholder="כתובת מייל">
@@ -63,6 +63,17 @@
                     <div>
                         <label for="tel">טלפון נייד</label>
                         <input type="tel" id="tel" name="tel" placeholder="טלפון נייד">
+                    </div>
+
+                    <div class="row">
+                        <div class="name-field">
+                            <label for="pass">סיסמה</label>
+                            <input type="password" id="pass" name="pass" placeholder="לפחות 8 תווים">
+                        </div>
+                        <div class="name-field">
+                            <label for="re-pass">אימות סיסמא</label>
+                            <input type="text" id="re-pass" name="re-pass" placeholder="הקלידו שוב">
+                        </div>
                     </div>
                 </form>
             </div>
