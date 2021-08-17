@@ -192,6 +192,19 @@ main {
   margin: -20px 50px 0 0;
 }
 
+.main-section .main-content .checkbox-div {
+  margin-top: 11px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-section .main-content .checkbox-div input {
+  width: 18px;
+  height: 18px;
+  margin-left: 11px;
+}
+
 .background-image {
   position: absolute;
   width: 720px;
@@ -210,25 +223,37 @@ section {
   height: 900px;
 }
 
-input {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
   height: 48px;
   border-radius: 4px;
   border: solid 1px #d6d6d6;
   padding: 0 16px 0 0;
 }
 
-input:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
   outline: 1px #aa198d;
   border-color: #aa198d;
   border-radius: 4px;
   color: #424242;
 }
 
-input:focus::placeholder {
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="password"]:focus::placeholder,
+input[type="tel"]:focus::placeholder {
   color: transparent;
 }
 
-input::placeholder {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="tel"]::placeholder {
   color: #d6d6d6;
 }
 

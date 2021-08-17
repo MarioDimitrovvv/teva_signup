@@ -45,12 +45,13 @@ main {
         }
 
         form {
-            & > div {
+            &>div {
                 margin-bottom: 25px;
 
                 label {
                     display: block;
                 }
+
                 input {
                     width: 476px;
                 }
@@ -72,6 +73,7 @@ main {
                     margin-bottom: 10px;
                     width: 235px;
                     height: 91px;
+
                     input {
                         width: 217px;
                     }
@@ -86,7 +88,7 @@ main {
             color: $light;
         }
 
-        .license{
+        .license {
             margin-bottom: 7px;
         }
 
@@ -96,6 +98,18 @@ main {
             position: absolute;
             top: 0;
             margin: -20px 50px 0 0;
+        }
+
+        .checkbox-div{
+            margin-top: 11px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            input {
+                width: 18px;
+                height: 18px;
+                margin-left: 11px;
+            }
         }
     }
 }
@@ -122,9 +136,11 @@ section {
 }
 
 
-input {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
     @include input-style;
-
 }
 
 select {
