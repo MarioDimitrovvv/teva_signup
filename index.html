@@ -41,12 +41,11 @@
                     <label for="email">אימייל</label>
                     <input type="email" id="email" name="email" placeholder="כתובת מייל">
                     <label for="job">התמחות</label>
-                    <select id="job" name="job">
-                        <option value="AL">Alabama</option>
-                        <option value="EL">Elbama</option>
-                        <option value="doctor">רופא.ה</option>
-                        <option value="nurse">אח.ות</option>
-                        <option value="pharmacist">רוקח.ת</option>
+                    <select id="job" name="job" data-placeholder="בחירה" class="js-example-basic-single">
+                        <option></option>
+                        <option value="doctor" data-image="./img/jobs/doctor/icon-doctor.png">רופא.ה</option>
+                        <option value="nurse" data-image="./img/jobs/nurse/icon-nurse.png">אח.ות</option>
+                        <option value="pharmacist" data-image="./img/jobs/pharmacist/icon-pharmacist.png">רוקח.ת</option>
                     </select>
                 </form>
             </div>

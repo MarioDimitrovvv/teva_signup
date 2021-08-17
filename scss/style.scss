@@ -1,10 +1,19 @@
 @import 'config';
 @import 'utils';
 @import 'typography';
+@import 'select2';
+
+html {
+    box-sizing: border-box;
+}
+
+// *,
+// *:before,
+// *:after {
+//     box-sizing: inherit;
+// }
 
 body {
-    // display: flex;
-    // justify-content: space-around;
     font-family: 'Afek';
     font-size: 16px;
 }
@@ -55,16 +64,15 @@ main {
                 }
             }
 
-            & > label {
+            &>label {
                 display: block;
             }
 
-            & > input {
+            &>input {
                 width: 478px;
                 margin-bottom: 25px;
             }
         }
-
     }
 }
 
@@ -99,6 +107,4 @@ input {
 select {
     @include input-style;
     width: 496px;
-
-    
 }
