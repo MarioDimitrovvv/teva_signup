@@ -16,14 +16,28 @@
   src: url("../fonts/Afek-Thin/Afek-Thin.ttf") format("truetype"), url("../fonts/Afek-Thin/Afek-Thin.woff") format("woff"), url("../fonts/Afek-Thin/Afek-Thin.woff2") format("woff2");
 }
 
+h1, .main-section .main-content header h1 {
+  color: #357875;
+  font-family: 'Afek-Bold';
+  font-size: 44px;
+  font-weight: 600;
+}
+
+p, .main-section .main-content header p {
+  line-height: 1.63;
+}
+
+label {
+  line-height: 1.5;
+}
+
 body {
-  display: flex;
-  justify-content: space-around;
   font-family: 'Afek';
   font-size: 16px;
 }
 
 main {
+  margin: 0 auto;
   width: 1440px;
   height: 900px;
   display: flex;
@@ -40,16 +54,11 @@ main {
 }
 
 .main-section .main-content header h1 {
-  color: #357875;
-  font-family: 'Afek-Bold';
-  font-size: 44px;
-  font-weight: 600;
   margin-top: 0;
   margin-bottom: 8px;
 }
 
 .main-section .main-content header p {
-  line-height: 1.63;
   margin: 0;
 }
 
@@ -94,10 +103,6 @@ main {
 section {
   width: 720px;
   height: 900px;
-}
-
-label {
-  line-height: 1.5;
 }
 
 input {

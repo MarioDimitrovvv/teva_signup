@@ -9,44 +9,53 @@
 
     <link rel="stylesheet" type="text/css" href="./css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script defer type="module" src="./js/index.js"></script>
 </head>
 
 <body dir="rtl">
-        <main>
-            <section class="main-section">
-                <div class="main-content">
-                    <header>
-                        <h1>הרשמה לאתר</h1>
-                        <p class="subtitle">יש להירשם עם פרטים אישיים בשפה העברית. לאחר וידוא הפרטים תקבל לכתובת הדוא"ל סיסמה לצורך כניסה לאתר</p>
-                    </header>
-                    <form method="POST">
-                        <fieldset>
-                            <div class="name-field">
-                                <label for="firstName">שם פרטי</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="שם פרטי">
-                            </div>
-                            <div class="name-field">
-                                <label for="secondName">שם משפחה</label>
-                                <input type="text" id="secondName" name="secondName" placeholder="שם משפחה">
-                            </div>
-                        </fieldset>
-                        <label for="email">אימייל</label>
-                        <input type="email" id="email" name="email" placeholder="כתובת מייל">
-                        <label for="job">התמחות</label>
-                        <select name="job" id="job">
-                            <option value="" disabled selected hidden id="placeholder">בחירה</option>
-                            <option value="doctor">רופא.ה</option>
-                            <option value="nurse">אח.ות</option>
-                            <option value="pharmacist">רוקח.ת</option>
-                        </select>
-                      </form>
-                </div>
-            </section>
-            <section class="background">
-                <img src="./img/bg/bg@2x.png" alt="background-image" class="background-image">
-                <img src="./img/logo/logo.png" alt="logo" class="background-logo">
-            </section>
-        </main>
+    <main>
+        <section class="main-section">
+            <div class="main-content">
+                <header>
+                    <h1>הרשמה לאתר</h1>
+                    <p class="subtitle">יש להירשם עם פרטים אישיים בשפה העברית. לאחר וידוא הפרטים תקבל לכתובת הדוא"ל
+                        סיסמה לצורך כניסה לאתר</p>
+                </header>
+                <form method="POST">
+                    <fieldset>
+                        <div class="name-field">
+                            <label for="firstName">שם פרטי</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="שם פרטי">
+                        </div>
+                        <div class="name-field">
+                            <label for="secondName">שם משפחה</label>
+                            <input type="text" id="secondName" name="secondName" placeholder="שם משפחה">
+                        </div>
+                    </fieldset>
+                    <label for="email">אימייל</label>
+                    <input type="email" id="email" name="email" placeholder="כתובת מייל">
+                    <label for="job">התמחות</label>
+                    <select id="job" name="job">
+                        <option value="AL">Alabama</option>
+                        <option value="EL">Elbama</option>
+                        <option value="doctor">רופא.ה</option>
+                        <option value="nurse">אח.ות</option>
+                        <option value="pharmacist">רוקח.ת</option>
+                    </select>
+                </form>
+            </div>
+        </section>
+        <section class="background">
+            <img src="./img/bg/bg@2x.png" alt="background-image" class="background-image">
+            <img src="./img/logo/logo.png" alt="logo" class="background-logo">
+        </section>
+    </main>
 </body>
 
 </html>

@@ -1,14 +1,16 @@
 @import 'config';
 @import 'utils';
+@import 'typography';
 
 body {
-    display: flex;
-    justify-content: space-around;
+    // display: flex;
+    // justify-content: space-around;
     font-family: 'Afek';
     font-size: 16px;
 }
 
 main {
+    margin: 0 auto;
     width: 1440px;
     height: 900px;
     display: flex;
@@ -25,16 +27,13 @@ main {
         header {
 
             h1 {
-                color: $color;
-                font-family: 'Afek-Bold';
-                font-size: 44px;
-                font-weight: 600;
+                @extend h1;
                 margin-top: 0;
                 margin-bottom: 8px;
             }
 
             p {
-                line-height: 1.63;
+                @extend p;
                 margin: 0;
             }
         }
@@ -91,9 +90,6 @@ section {
     height: 900px;
 }
 
-label {
-    line-height: 1.5;
-}
 
 input {
     @include input-style;
