@@ -26,7 +26,7 @@ main {
 }
 
 .main-section {
-    border: solid 1px #d6d6d6;
+    border: solid 1px $light;
     max-width: 720px;
     max-height: 900px;
 
@@ -34,13 +34,11 @@ main {
         padding: 48px 113px;
 
         header {
-
             h1 {
                 @extend h1;
                 margin-top: 0;
                 margin-bottom: 8px;
             }
-
             p {
                 @extend p;
                 margin: 0;
@@ -64,20 +62,29 @@ main {
                 }
             }
 
-            &>label {
-                display: block;
-            }
-
-            &>input {
-                width: 478px;
+            &>div {
                 margin-bottom: 25px;
+
+                label {
+                    display: block;
+                }
+
+                input {
+                    width: 478px;
+                }
+
             }
+        }
+
+        .description {
+            margin: 0;
+            font-size: 12px;
+            color: $light;
         }
     }
 }
 
 .background {
-
     &-image {
         position: absolute;
         width: 720px;

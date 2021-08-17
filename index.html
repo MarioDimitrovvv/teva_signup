@@ -38,15 +38,32 @@
                             <input type="text" id="secondName" name="secondName" placeholder="שם משפחה">
                         </div>
                     </fieldset>
-                    <label for="email">אימייל</label>
-                    <input type="email" id="email" name="email" placeholder="כתובת מייל">
-                    <label for="job">התמחות</label>
-                    <select id="job" name="job" data-placeholder="בחירה" class="js-example-basic-single">
-                        <option></option>
-                        <option value="doctor" data-image="./img/jobs/doctor/icon-doctor.png">רופא.ה</option>
-                        <option value="nurse" data-image="./img/jobs/nurse/icon-nurse.png">אח.ות</option>
-                        <option value="pharmacist" data-image="./img/jobs/pharmacist/icon-pharmacist.png">רוקח.ת</option>
-                    </select>
+                    <div>
+                        <label for="email">אימייל</label>
+                        <input type="email" id="email" name="email" placeholder="כתובת מייל">
+                    </div>
+
+                    <div>
+                        <label for="job">התמחות</label>
+                        <select id="job" name="job" data-placeholder="בחירה" class="js-example-basic-single">
+                            <option></option>
+                            <option value="doctor" data-image="./img/jobs/doctor/icon-doctor.png">רופא.ה</option>
+                            <option value="nurse" data-image="./img/jobs/nurse/icon-nurse.png">אח.ות</option>
+                            <option value="pharmacist" data-image="./img/jobs/pharmacist/icon-pharmacist.png">רוקח.ת
+                            </option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="license">מספר רשיון</label>
+                        <input type="text" id="license" name="license" placeholder="מספר הרשיון שמתחיל ב-0">
+                        <p class="description">אנא הכניסו את מספר הרישיון ללא המספר שמופיע לפני המקף (1-) המופיע במספר הרישיון</p>
+                    </div>
+
+                    <div>
+                        <label for="tel">טלפון נייד</label>
+                        <input type="tel" id="tel" name="tel" placeholder="טלפון נייד">
+                    </div>
                 </form>
             </div>
         </section>

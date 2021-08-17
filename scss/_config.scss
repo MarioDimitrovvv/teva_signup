@@ -1,7 +1,8 @@
 @import 'utils';
 
-$color: #357875;
+$green: #357875;
 $purple: #aa198d;
+$light: #d6d6d6;
 $font-stack: url('../fonts/Afek-Regular/Afek-Regular.woff');
 
 @include font-face("Afek-Bold", "Afek-DemiBold");

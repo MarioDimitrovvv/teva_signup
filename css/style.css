@@ -61,7 +61,7 @@ label {
 }
 
 .select2-container--default .select2-selection--single::placeholder {
-  color: #898989;
+  color: #d6d6d6;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -79,6 +79,10 @@ label {
 #select2-job-container {
   margin-top: -15px;
   margin-right: -15px;
+}
+
+#select2-job-container * {
+  color: #d6d6d6;
 }
 
 .select2-results__options {
@@ -151,13 +155,22 @@ main {
   height: 91px;
 }
 
-.main-section .main-content form > label {
+.main-section .main-content form > div {
+  margin-bottom: 25px;
+}
+
+.main-section .main-content form > div label {
   display: block;
 }
 
-.main-section .main-content form > input {
+.main-section .main-content form > div input {
   width: 478px;
-  margin-bottom: 25px;
+}
+
+.main-section .main-content .description {
+  margin: 0;
+  font-size: 12px;
+  color: #d6d6d6;
 }
 
 .background-image {
@@ -197,7 +210,7 @@ input:focus::placeholder {
 }
 
 input::placeholder {
-  color: #898989;
+  color: #d6d6d6;
 }
 
 select {
@@ -220,5 +233,5 @@ select:focus::placeholder {
 }
 
 select::placeholder {
-  color: #898989;
+  color: #d6d6d6;
 }
