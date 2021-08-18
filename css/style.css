@@ -25,15 +25,95 @@ h1 {
 
 p {
   line-height: 1.63;
+  cursor: default;
 }
 
 label {
   line-height: 1.5;
 }
 
+button {
+  font-family: 'Afek-Bold';
+  width: 180px;
+  height: 48px;
+  border-radius: 29.2px;
+  background-color: #357875;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+a {
+  font-family: 'Afek-Bold';
+  color: #357875;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  height: 48px;
+  border-radius: 4px;
+  border: solid 1px #d6d6d6;
+  padding: 0 16px 0 0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+  outline: 1px #aa198d;
+  border-color: #aa198d;
+  border-radius: 4px;
+  color: #424242;
+}
+
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="password"]:focus::placeholder,
+input[type="tel"]:focus::placeholder {
+  color: transparent;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="tel"]::placeholder {
+  color: #d6d6d6;
+}
+
+select {
+  height: 48px;
+  border-radius: 4px;
+  border: solid 1px #d6d6d6;
+  padding: 0 16px 0 0;
+  width: 496px;
+}
+
+select:focus {
+  outline: 1px #aa198d;
+  border-color: #aa198d;
+  border-radius: 4px;
+  color: #424242;
+}
+
+select:focus::placeholder {
+  color: transparent;
+}
+
+select::placeholder {
+  color: #d6d6d6;
+}
+
 .select2-dropdown.select2-dropdown--below {
   width: 496px;
   border: 1px solid #d6d6d6;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.14);
 }
 
 .select2-container--default .select2-selection--single {
@@ -115,15 +195,15 @@ body {
 
 main {
   margin: 0 auto;
-  width: 1440px;
-  height: 900px;
+  max-width: 1440px;
+  max-height: 900px;
   display: flex;
 }
 
 .main-section {
   border: solid 1px #d6d6d6;
   max-width: 720px;
-  max-height: 900px;
+  height: 898px;
 }
 
 .main-section .main-content {
@@ -137,6 +217,10 @@ main {
 
 .main-section .main-content header p {
   margin-bottom: 21px;
+}
+
+.main-section .main-content form {
+  position: relative;
 }
 
 .main-section .main-content form > div {
@@ -205,6 +289,23 @@ main {
   margin-left: 11px;
 }
 
+.main-section .main-content .div-submit {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 494px;
+  font-size: 18px;
+  height: 86px;
+  padding: 0 113px;
+  margin: -45px -113px;
+  bottom: 0;
+  box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: solid 1px #d6d6d6;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
 .background-image {
   position: absolute;
   width: 720px;
@@ -221,61 +322,4 @@ main {
 section {
   width: 720px;
   height: 900px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"] {
-  height: 48px;
-  border-radius: 4px;
-  border: solid 1px #d6d6d6;
-  padding: 0 16px 0 0;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="tel"]:focus {
-  outline: 1px #aa198d;
-  border-color: #aa198d;
-  border-radius: 4px;
-  color: #424242;
-}
-
-input[type="text"]:focus::placeholder,
-input[type="email"]:focus::placeholder,
-input[type="password"]:focus::placeholder,
-input[type="tel"]:focus::placeholder {
-  color: transparent;
-}
-
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="password"]::placeholder,
-input[type="tel"]::placeholder {
-  color: #d6d6d6;
-}
-
-select {
-  height: 48px;
-  border-radius: 4px;
-  border: solid 1px #d6d6d6;
-  padding: 0 16px 0 0;
-  width: 496px;
-}
-
-select:focus {
-  outline: 1px #aa198d;
-  border-color: #aa198d;
-  border-radius: 4px;
-  color: #424242;
-}
-
-select:focus::placeholder {
-  color: transparent;
-}
-
-select::placeholder {
-  color: #d6d6d6;
 }

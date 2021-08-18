@@ -7,8 +7,43 @@ h1 {
 
 p {
     line-height: 1.63;
+    cursor: default;
 }
 
 label {
     line-height: 1.5;
+}
+
+button {
+    font-family: 'Afek-Bold';
+    width: 180px;
+    height: 48px;
+    border-radius: 29.2px;
+    background-color: $green;
+    border: none;
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a {
+    font-family: 'Afek-Bold';
+    color: $green;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+// Don't sure is this the right place for this
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    @include input-style;
+}
+
+select {
+    @include input-style;
+    width: 496px;
 }

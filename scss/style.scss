@@ -20,15 +20,15 @@ body {
 
 main {
     margin: 0 auto;
-    width: 1440px;
-    height: 900px;
+    max-width: 1440px;
+    max-height: 900px;
     display: flex;
 }
 
 .main-section {
     border: solid 1px $light;
     max-width: 720px;
-    max-height: 900px;
+    height: 898px;
 
     .main-content {
         padding: 48px 113px;
@@ -45,6 +45,8 @@ main {
         }
 
         form {
+            position: relative;
+
             &>div {
                 margin-bottom: 25px;
 
@@ -78,7 +80,6 @@ main {
                         width: 217px;
                     }
                 }
-
             }
         }
 
@@ -100,16 +101,35 @@ main {
             margin: -20px 50px 0 0;
         }
 
-        .checkbox-div{
+        .checkbox-div {
             margin-top: 11px;
             display: flex;
             justify-content: flex-start;
             align-items: center;
+
+            // Change the background color
             input {
                 width: 18px;
                 height: 18px;
                 margin-left: 11px;
             }
+        }
+
+        .div-submit {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 494px;
+            font-size: 18px;
+            height: 86px;
+            padding: 0 113px;
+            margin: -45px -113px;
+            bottom: 0;
+            box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.1);
+            border-bottom: solid 1px $light;
+            background-color: $white;
+            z-index: 1;
         }
     }
 }
@@ -125,7 +145,6 @@ main {
         position: relative;
         width: 147px;
         height: 52px;
-        // object-fit: contain;
         padding: 45px 531px 803px 42px;
     }
 }
@@ -133,17 +152,4 @@ main {
 section {
     width: 720px;
     height: 900px;
-}
-
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"] {
-    @include input-style;
-}
-
-select {
-    @include input-style;
-    width: 496px;
 }
