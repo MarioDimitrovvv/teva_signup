@@ -205,6 +205,7 @@ main {
   max-width: 720px;
   height: 898px;
   display: flex;
+  justify-content: center;
 }
 
 .main-section .tablet {
@@ -224,6 +225,7 @@ main {
   padding: 48px 113px;
   background-color: #ffffff;
   align-items: center;
+  width: 496px;
 }
 
 .main-section .main-content header h1 {

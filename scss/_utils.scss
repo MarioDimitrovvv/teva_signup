@@ -31,6 +31,23 @@
   }
 }
 
+@mixin submit-box {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 494px;
+  font-size: 18px;
+  height: 86px;
+  padding: 0 113px;
+  margin: -45px -113px;
+  bottom: 0;
+  box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: solid 1px $light;
+  background-color: $white;
+  z-index: 1;
+}
+
 @mixin tablet-mode {
   @media screen and (max-width: 896px) {
     @content;
