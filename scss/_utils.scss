@@ -1,5 +1,5 @@
 @mixin font-face($name, $file) {
-    @font-face {
+  @font-face {
     font-family: "#{$name}";
     src: url("../fonts/#{$file}/#{$file}.eot");
     src: url('../fonts/#{$file}/#{$file}.ttf') format('truetype'),
@@ -15,18 +15,24 @@
   padding: 0 16px 0 0;
 
   &:focus {
-      outline: 1px $purple;
-      border-color: $purple;
-      border-radius: 4px;
-      color: #424242;
+    outline: 1px $purple;
+    border-color: $purple;
+    border-radius: 4px;
+    color: #424242;
 
-      &::placeholder {
-          color: transparent;
-      }
+    &::placeholder {
+      color: transparent;
+    }
   }
 
   // Not working in Explorer...
   &::placeholder {
-      color:$light;
+    color: $light;
+  }
+}
+
+@mixin tablet-mode {
+  @media screen and (max-width: 896px) {
+    @content;
   }
 }
