@@ -30,14 +30,13 @@ main {
     max-width: 720px;
     height: 898px;
     display: flex;
-    justify-content: center;
-
+    
     .tablet {
         display: none;
-
+        
         @include tablet-mode {
             display: inline-block;
-            height: 1089px;
+            height: 1183px;
             width: 768px;
         }
     }
@@ -136,7 +135,7 @@ main {
 
             @include tablet-mode {
                 position: static;
-                width: 574px;
+                width: 494px;
                 padding: 0;
                 margin: 0;
                 border: none;
@@ -148,13 +147,21 @@ main {
             padding: 0;
             margin: 128px 97px 61px 97px;
             background-color: $white;
-            height: 900px;
+            height: 994px;
             width: 594px;
+
         }
     }
 
     @include tablet-mode {
         margin: auto;
+        justify-content: center;
+    }
+}
+
+.inner-div{
+    @include tablet-mode {
+        padding: 56px 40px;
     }
 }
 
@@ -166,9 +173,7 @@ main {
     }
 
     &-logo {
-        position: relative;
-        width: 147px;
-        height: 52px;
+        @include logo;        
         padding: 45px 531px 803px 42px;
     }
 
@@ -176,6 +181,15 @@ main {
         display: none;
     }
 }
+
+// .tablet-logo {
+//     display: none;
+
+//     @include tablet-mode {
+//         display: inline;
+//         @include logo;
+//     }
+// }
 
 section {
     width: 720px;

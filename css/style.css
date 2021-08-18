@@ -205,7 +205,6 @@ main {
   max-width: 720px;
   height: 898px;
   display: flex;
-  justify-content: center;
 }
 
 .main-section .tablet {
@@ -215,7 +214,7 @@ main {
 @media screen and (max-width: 896px) {
   .main-section .tablet {
     display: inline-block;
-    height: 1089px;
+    height: 1183px;
     width: 768px;
   }
 }
@@ -327,7 +326,7 @@ main {
 @media screen and (max-width: 896px) {
   .main-section .main-content .div-submit {
     position: static;
-    width: 574px;
+    width: 494px;
     padding: 0;
     margin: 0;
     border: none;
@@ -340,7 +339,7 @@ main {
     padding: 0;
     margin: 128px 97px 61px 97px;
     background-color: #ffffff;
-    height: 900px;
+    height: 994px;
     width: 594px;
   }
 }
@@ -348,6 +347,13 @@ main {
 @media screen and (max-width: 896px) {
   .main-section {
     margin: auto;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .inner-div {
+    padding: 56px 40px;
   }
 }
 

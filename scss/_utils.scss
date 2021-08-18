@@ -48,8 +48,14 @@
   z-index: 1;
 }
 
+@mixin logo {
+  position: relative;
+  width: 147px;
+  height: 52px;
+}
+
 @mixin tablet-mode {
-  @media screen and (max-width: 896px) {
+  @media screen and ($tablet) {
     @content;
   }
 }

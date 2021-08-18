@@ -4,6 +4,10 @@ $green: #357875;
 $purple: #aa198d;
 $light: #d6d6d6;
 $white: #ffffff;
+
+$tablet: 'max-width: 896px';
+$mobile: 'max-width: 425px';
+
 $font-stack: url('../fonts/Afek-Regular/Afek-Regular.woff');
 
 @include font-face("Afek-Bold", "Afek-DemiBold");
