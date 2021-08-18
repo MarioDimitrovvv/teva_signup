@@ -22,12 +22,17 @@
 
     &::placeholder {
       color: transparent;
+      // For %
+      // padding-right: 16px;
     }
   }
 
   // Not working in Explorer...
   &::placeholder {
     color: $light;
+    // For %
+    // padding-right: 16px;
+
   }
 }
 
@@ -53,8 +58,14 @@
   height: 52px;
 }
 
-@mixin tablet-mode {
-  @media screen and ($tablet) {
+// @mixin tablet-mode {
+//   @media screen and ($tablet-max) and ($tablet-min) {
+//     @content;
+//   }
+// }
+
+@mixin mobile-mode {
+  @media screen and ($mobile) {
     @content;
   }
 }

@@ -194,16 +194,23 @@ body {
 }
 
 main {
-  margin: 0 auto;
   max-width: 1440px;
   max-height: 900px;
   display: flex;
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    display: inline-flex;
+    justify-content: center;
+  }
 }
 
 .main-section {
   border: solid 1px #d6d6d6;
   max-width: 720px;
   height: 898px;
+  margin: 0;
   display: flex;
 }
 
@@ -211,11 +218,17 @@ main {
   display: none;
 }
 
-@media screen and (max-width: 896px) {
-  .main-section .tablet {
+.main-section .mobile {
+  display: none;
+}
+
+@media screen and (max-width: 425px) {
+  .main-section .mobile {
     display: inline-block;
-    height: 1183px;
-    width: 768px;
+    position: absolute;
+    top: 0;
+    width: 375px;
+    height: 193px;
   }
 }
 
@@ -224,7 +237,7 @@ main {
   padding: 48px 113px;
   background-color: #ffffff;
   align-items: center;
-  width: 496px;
+  width: 494px;
 }
 
 .main-section .main-content header h1 {
@@ -248,17 +261,36 @@ main {
   display: block;
 }
 
+@media screen and (max-width: 425px) {
+  .main-section .main-content form > div label {
+    width: 316px;
+  }
+}
+
 .main-section .main-content form > div input {
   width: 476px;
+}
+
+@media screen and (max-width: 425px) {
+  .main-section .main-content form > div input {
+    width: 316px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main-section .main-content form > div {
+    width: 334px;
+    margin-left: 0;
+  }
 }
 
 .main-section .main-content form .row {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  margin-left: 29px;
   width: 494px;
   margin-bottom: 0;
-  margin-left: 24px;
   position: relative;
 }
 
@@ -272,7 +304,26 @@ main {
 }
 
 .main-section .main-content form .row .name-field input {
-  width: 217px;
+  width: 215px;
+}
+
+@media screen and (max-width: 425px) {
+  .main-section .main-content form .row .name-field input {
+    width: 143px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main-section .main-content form .row .name-field {
+    width: 159px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main-section .main-content form .row {
+    justify-content: space-between;
+    width: 334px;
+  }
 }
 
 .main-section .main-content .description {
@@ -323,37 +374,27 @@ main {
   z-index: 1;
 }
 
-@media screen and (max-width: 896px) {
-  .main-section .main-content .div-submit {
-    position: static;
-    width: 494px;
-    padding: 0;
-    margin: 0;
-    border: none;
-    box-shadow: none;
-  }
-}
-
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 425px) {
   .main-section .main-content {
     padding: 0;
-    margin: 128px 97px 61px 97px;
+    margin-top: 193px;
     background-color: #ffffff;
-    height: 994px;
-    width: 594px;
+    height: 1018px;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 425px) {
   .main-section {
-    margin: auto;
-    justify-content: center;
+    flex-direction: column;
+    width: 375px;
+    margin: 85px;
   }
 }
 
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 425px) {
   .inner-div {
-    padding: 56px 40px;
+    padding: 0 20px;
   }
 }
 
@@ -370,7 +411,7 @@ main {
   padding: 45px 531px 803px 42px;
 }
 
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 425px) {
   .background {
     display: none;
   }
@@ -378,16 +419,6 @@ main {
 
 .tablet-logo {
   display: none;
-}
-
-@media screen and (max-width: 896px) {
-  .tablet-logo {
-    width: 147px;
-    height: 52px;
-    display: inline;
-    position: absolute;
-    top: 44px;
-  }
 }
 
 section {
