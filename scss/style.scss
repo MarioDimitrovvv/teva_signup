@@ -113,7 +113,7 @@ main {
             height: 24px;
             position: absolute;
             top: 0;
-            margin: -20px 50px 0 0;
+            margin: 0 50px 0 0;
         }
 
         .checkbox-div {
@@ -173,7 +173,8 @@ main {
     }
 
     &-logo {
-        @include logo;        
+        @include logo;
+        position: relative;      
         padding: 45px 531px 803px 42px;
     }
 
@@ -182,14 +183,16 @@ main {
     }
 }
 
-// .tablet-logo {
-//     display: none;
+.tablet-logo {
+    display: none;
 
-//     @include tablet-mode {
-//         display: inline;
-//         @include logo;
-//     }
-// }
+    @include tablet-mode {
+        @include logo;
+        display: inline;
+        position: absolute;
+        top: 44px;
+    }
+}
 
 section {
     width: 720px;

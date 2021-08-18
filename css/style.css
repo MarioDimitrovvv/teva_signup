@@ -290,7 +290,7 @@ main {
   height: 24px;
   position: absolute;
   top: 0;
-  margin: -20px 50px 0 0;
+  margin: 0 50px 0 0;
 }
 
 .main-section .main-content .checkbox-div {
@@ -364,15 +364,29 @@ main {
 }
 
 .background-logo {
-  position: relative;
   width: 147px;
   height: 52px;
+  position: relative;
   padding: 45px 531px 803px 42px;
 }
 
 @media screen and (max-width: 896px) {
   .background {
     display: none;
+  }
+}
+
+.tablet-logo {
+  display: none;
+}
+
+@media screen and (max-width: 896px) {
+  .tablet-logo {
+    width: 147px;
+    height: 52px;
+    display: inline;
+    position: absolute;
+    top: 44px;
   }
 }
 
