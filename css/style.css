@@ -188,6 +188,12 @@ html {
   box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Afek';
   font-size: 16px;
@@ -209,16 +215,17 @@ main {
 
 .main-section {
   border: solid 1px #d6d6d6;
-  max-width: 720px;
   height: 898px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-section .tablet {
   display: none;
 }
 
-@media screen and (max-width: 896px) and (min-width: 426px) {
+@media screen and (max-width: 1000px) and (min-width: 426px) {
   .main-section .tablet {
     display: inline-block;
     height: 1183px;
@@ -242,10 +249,10 @@ main {
 
 .main-section .main-content {
   z-index: 1;
-  padding: 48px 113px;
-  background-color: #ffffff;
-  align-items: center;
   width: 494px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-section .main-content header h1 {
@@ -255,6 +262,7 @@ main {
 
 .main-section .main-content header p {
   margin-bottom: 21px;
+  width: calc(100% - 15px);
 }
 
 .main-section .main-content form {
@@ -267,6 +275,7 @@ main {
 
 .main-section .main-content form > div label {
   display: block;
+  width: 100%;
 }
 
 @media screen and (max-width: 425px) {
@@ -276,7 +285,7 @@ main {
 }
 
 .main-section .main-content form > div input {
-  width: 476px;
+  width: 100%;
 }
 
 @media screen and (max-width: 425px) {
@@ -296,8 +305,6 @@ main {
   padding: 0;
   display: flex;
   justify-content: space-between;
-  margin-left: 29px;
-  width: 494px;
   margin-bottom: 0;
   position: relative;
 }
@@ -312,13 +319,7 @@ main {
 }
 
 .main-section .main-content form .row .name-field input {
-  width: 215px;
-}
-
-@media screen and (max-width: 425px) {
-  .main-section .main-content form .row .name-field input {
-    width: 143px;
-  }
+  width: 100%;
 }
 
 @media screen and (max-width: 425px) {
@@ -382,7 +383,7 @@ main {
   z-index: 1;
 }
 
-@media screen and (max-width: 896px) and (min-width: 426px) {
+@media screen and (max-width: 1000px) and (min-width: 426px) {
   .main-section .main-content .div-submit {
     position: static;
     width: 494px;
@@ -393,7 +394,7 @@ main {
   }
 }
 
-@media screen and (max-width: 896px) and (min-width: 426px) {
+@media screen and (max-width: 1000px) and (min-width: 426px) {
   .main-section .main-content {
     padding: 0;
     margin: 128px 97px 61px 97px;
@@ -414,7 +415,7 @@ main {
   }
 }
 
-@media screen and (max-width: 896px) and (min-width: 426px) {
+@media screen and (max-width: 1000px) and (min-width: 426px) {
   .main-section {
     margin: auto;
     justify-content: center;
@@ -429,32 +430,42 @@ main {
   }
 }
 
-@media screen and (max-width: 896px) and (min-width: 426px) {
-  .inner-div {
+.wrapper {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 426px) {
+  .wrapper {
     padding: 56px 40px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .inner-div {
+  .wrapper {
     padding: 0 20px;
   }
 }
 
+.background {
+  position: relative;
+}
+
 .background-image {
   position: absolute;
-  width: 720px;
+  width: 100%;
   height: 900px;
 }
 
 .background-logo {
   width: 147px;
   height: 52px;
-  position: relative;
-  padding: 45px 531px 803px 42px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  margin: 45px 0 0 42px;
 }
 
-@media screen and (max-width: 896px) and (min-width: 426px) {
+@media screen and (max-width: 1000px) and (min-width: 426px) {
   .background {
     display: none;
   }
@@ -470,7 +481,7 @@ main {
   display: none;
 }
 
-@media screen and (max-width: 896px) and (min-width: 426px) {
+@media screen and (max-width: 1000px) and (min-width: 426px) {
   .tablet-logo {
     width: 147px;
     height: 52px;
@@ -481,6 +492,6 @@ main {
 }
 
 section {
-  width: 720px;
-  height: 900px;
+  width: 50%;
+  height: 100%;
 }
