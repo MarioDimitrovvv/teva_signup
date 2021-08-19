@@ -202,8 +202,15 @@ body {
 main {
   margin: 0 auto;
   max-width: 1440px;
-  max-height: 900px;
+  height: 900px;
   display: flex;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 426px) {
+  main {
+    height: 1184px;
+    width: 768px;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -218,7 +225,6 @@ main {
   height: 898px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .main-section .tablet {
@@ -227,8 +233,9 @@ main {
 
 @media screen and (max-width: 1000px) and (min-width: 426px) {
   .main-section .tablet {
-    display: inline-block;
-    height: 1183px;
+    margin: 0;
+    display: block;
+    height: 1184px;
     width: 768px;
   }
 }
@@ -253,6 +260,7 @@ main {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  margin-top: 48px;
 }
 
 .main-section .main-content header h1 {
@@ -374,10 +382,9 @@ main {
   width: 494px;
   font-size: 18px;
   height: 86px;
-  padding: 0 113px;
-  margin: -45px -113px;
+  margin: -49px auto;
   bottom: 0;
-  box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -4px 8px 0 rgba(0, 0, 0, 0.1);
   border-bottom: solid 1px #d6d6d6;
   background-color: #ffffff;
   z-index: 1;
@@ -397,10 +404,11 @@ main {
 @media screen and (max-width: 1000px) and (min-width: 426px) {
   .main-section .main-content {
     padding: 0;
-    margin: 128px 97px 61px 97px;
+    margin-top: 128px;
     background-color: #ffffff;
-    height: 994px;
-    width: 594px;
+    height: 995px;
+    width: 100%;
+    padding: 56px 40px 55px 40px;
   }
 }
 
@@ -419,6 +427,8 @@ main {
   .main-section {
     margin: auto;
     justify-content: center;
+    height: 1184px;
+    width: 574px;
   }
 }
 
@@ -432,6 +442,7 @@ main {
 
 .wrapper {
   width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 1000px) and (min-width: 426px) {
