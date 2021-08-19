@@ -58,11 +58,11 @@
   height: 52px;
 }
 
-// @mixin tablet-mode {
-//   @media screen and ($tablet-max) and ($tablet-min) {
-//     @content;
-//   }
-// }
+@mixin tablet-mode {
+  @media screen and ($tablet-max) and ($tablet-min) {
+    @content;
+  }
+}
 
 @mixin mobile-mode {
   @media screen and ($mobile) {
