@@ -20,6 +20,7 @@
   
   &:focus {
     outline: 1px $purple;
+    transition: all 0.3s ease;
     border-color: $purple;
     border-radius: 4px;
     color: $grey;

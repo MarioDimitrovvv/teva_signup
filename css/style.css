@@ -75,6 +75,7 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="tel"]:focus {
   outline: 1px #aa198d;
+  transition: all 0.3s ease;
   border-color: #aa198d;
   border-radius: 4px;
   color: #707070;
@@ -108,6 +109,7 @@ select:hover {
 
 select:focus {
   outline: 1px #aa198d;
+  transition: all 0.3s ease;
   border-color: #aa198d;
   border-radius: 4px;
   color: #707070;
@@ -148,6 +150,7 @@ select::placeholder {
 
 .select2-container--default .select2-selection--single:focus {
   outline: 1px #aa198d;
+  transition: all 0.3s ease;
   border-color: #aa198d;
   border-radius: 4px;
   color: #707070;
@@ -585,6 +588,14 @@ main {
     position: absolute;
     top: 70px;
   }
+}
+
+.error input {
+  background-image: url("../img/others/icon-error.png");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: 4% 50%;
+  background-color: rgba(255, 58, 0, 0.08);
 }
 
 section {
