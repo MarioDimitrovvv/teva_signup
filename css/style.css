@@ -199,7 +199,7 @@ body {
 
 main {
   margin: 0 auto;
-  max-width: 1440px;
+  width: 1440px;
   height: 900px;
   display: flex;
 }
@@ -223,6 +223,7 @@ main {
   height: 898px;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .main-section .tablet {
@@ -370,7 +371,21 @@ main {
 }
 
 @media screen and (max-width: 1000px) and (min-width: 426px) {
-  .main-section .main-content .div-submit {
+  .main-section {
+    margin: auto;
+    justify-content: center;
+    height: 1184px;
+    width: 574px;
+  }
+  .main-section .main-content {
+    padding: 0;
+    margin-top: 128px;
+    background-color: #ffffff;
+    height: 995px;
+    width: 100%;
+    padding: 56px 40px 55px 40px;
+  }
+  .main-section .div-submit {
     position: static;
     width: 494px;
     padding: 0;
@@ -381,7 +396,21 @@ main {
 }
 
 @media screen and (max-width: 425px) {
-  .main-section .main-content .div-submit {
+  .main-section {
+    margin: 0 auto;
+    justify-content: center;
+    height: 100%;
+    width: 375px;
+  }
+  .main-section .main-content {
+    padding: 0;
+    margin-top: 193px;
+    background-color: #ffffff;
+    height: 1018px;
+    width: 100%;
+    padding: 30px 20px 32px 21px;
+  }
+  .main-section .div-submit {
     position: static;
     flex-wrap: wrap;
     justify-content: center;
@@ -391,48 +420,54 @@ main {
     border: none;
     box-shadow: none;
   }
-  .main-section .main-content .div-submit button {
+  .main-section .div-submit button {
     width: 100%;
   }
 }
 
+.close-btn {
+  position: absolute;
+  right: 0;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #ffffff;
+}
+
+.close-btn .white {
+  display: none;
+}
+
 @media screen and (max-width: 1000px) and (min-width: 426px) {
-  .main-section .main-content {
-    padding: 0;
-    margin-top: 128px;
-    background-color: #ffffff;
-    height: 995px;
-    width: 100%;
-    padding: 56px 40px 55px 40px;
+  .close-btn {
+    background-color: inherit;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .close-btn .white {
+    margin-right: -57px;
+    display: block;
+    z-index: 1;
+  }
+  .close-btn .black {
+    display: none;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .main-section .main-content {
-    padding: 0;
-    margin-top: 193px;
-    background-color: #ffffff;
-    height: 1018px;
-    width: 100%;
-    padding: 30px 20px 32px 21px;
+  .close-btn {
+    background-color: inherit;
   }
-}
-
-@media screen and (max-width: 1000px) and (min-width: 426px) {
-  .main-section {
-    margin: auto;
-    justify-content: center;
-    height: 1184px;
-    width: 574px;
+  .close-btn .white {
+    margin: 0;
+    display: block;
+    z-index: 1;
   }
-}
-
-@media screen and (max-width: 425px) {
-  .main-section {
-    margin: 0 auto;
-    justify-content: center;
-    height: 100%;
-    width: 375px;
+  .close-btn .black {
+    display: none;
   }
 }
 

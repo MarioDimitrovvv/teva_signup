@@ -22,16 +22,12 @@
 
     &::placeholder {
       color: transparent;
-      // For %
-      // padding-right: 16px;
     }
   }
 
   // Not working in Explorer...
   &::placeholder {
     color: $light;
-    // For %
-    // padding-right: 16px;
 
   }
 }

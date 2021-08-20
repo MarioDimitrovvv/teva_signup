@@ -20,7 +20,9 @@ body {
 
 main {
     margin: 0 auto;
-    max-width: 1440px;
+    // For static width
+    width: 1440px;
+    // 
     height: 900px;
     display: flex;
 
@@ -28,7 +30,7 @@ main {
         height: 1184px;
         width: 768px;
     }
-    
+
     @include mobile-mode {
         height: 1211px;
         width: 375px;
@@ -40,6 +42,7 @@ main {
     height: 898px;
     display: flex;
     justify-content: center;
+    position: relative;
 
     .tablet {
         display: none;
@@ -90,7 +93,7 @@ main {
 
         form {
             position: relative;
-            
+
             &>div {
                 margin-bottom: 25px;
 
@@ -98,13 +101,13 @@ main {
                     display: block;
                     width: 100%;
 
-                    
+
                 }
 
                 input {
                     width: 100%;
 
-                    
+
                 }
 
                 @include mobile-mode {
@@ -130,10 +133,6 @@ main {
 
                     input {
                         width: 100%;
-
-                        // @include mobile-mode {
-                        //     width: 143px;
-                        // }
                     }
 
                     @include mobile-mode {
@@ -143,7 +142,7 @@ main {
                 }
             }
 
-            
+
         }
 
         .description {
@@ -181,50 +180,50 @@ main {
         .div-submit {
             @include submit-box;
 
-            @include tablet-mode {
-                position: static;
-                width: 494px;
-                padding: 0;
-                margin: 0;
-                border: none;
-                box-shadow: none;
-            }
+            // @include tablet-mode {
+            //     position: static;
+            //     width: 494px;
+            //     padding: 0;
+            //     margin: 0;
+            //     border: none;
+            //     box-shadow: none;
+            // }
 
-            @include mobile-mode {
-                position: static;
-                flex-wrap: wrap;
-                justify-content: center;
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                border: none;
-                box-shadow: none;
+            // @include mobile-mode {
+            //     position: static;
+            //     flex-wrap: wrap;
+            //     justify-content: center;
+            //     width: 100%;
+            //     padding: 0;
+            //     margin: 0;
+            //     border: none;
+            //     box-shadow: none;
 
-                button {
-                    width: 100%;
-                }
-            }
+            //     button {
+            //         width: 100%;
+            //     }
+            // }
         }
 
-        @include tablet-mode {
-            padding: 0;
-            margin-top: 128px;
-            background-color: $white;
-            height: 995px; 
-            width: 100%;
-            padding: 56px 40px 55px 40px;
-        }
+        // @include tablet-mode {
+        //     padding: 0;
+        //     margin-top: 128px;
+        //     background-color: $white;
+        //     height: 995px; 
+        //     width: 100%;
+        //     padding: 56px 40px 55px 40px;
+        // }
 
-        @include mobile-mode {
-            padding: 0;
-            margin-top: 193px;
-            background-color: $white;
-            height: 1018px;
-            // width: 375px;
-            // height: 100%;
-            width: 100%;
-            padding: 30px 20px 32px 21px;
-        }
+        // @include mobile-mode {
+        //     padding: 0;
+        //     margin-top: 193px;
+        //     background-color: $white;
+        //     height: 1018px;
+        //     // width: 375px;
+        //     // height: 100%;
+        //     width: 100%;
+        //     padding: 30px 20px 32px 21px;
+        // }
     }
 
     @include tablet-mode {
@@ -232,6 +231,24 @@ main {
         justify-content: center;
         height: 1184px;
         width: 574px;
+
+        .main-content {
+            padding: 0;
+            margin-top: 128px;
+            background-color: $white;
+            height: 995px;
+            width: 100%;
+            padding: 56px 40px 55px 40px;
+        }
+
+        .div-submit {
+            position: static;
+            width: 494px;
+            padding: 0;
+            margin: 0;
+            border: none;
+            box-shadow: none;
+        }
     }
 
     @include mobile-mode {
@@ -239,19 +256,82 @@ main {
         justify-content: center;
         height: 100%;
         width: 375px;
+
+        .main-content {
+            padding: 0;
+            margin-top: 193px;
+            background-color: $white;
+            height: 1018px;
+            width: 100%;
+            padding: 30px 20px 32px 21px;
+        }
+
+        .div-submit {
+            position: static;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            border: none;
+            box-shadow: none;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.close-btn {
+    position: absolute;
+    right: 0;
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: $white;
+
+    .white {
+        display: none;
+    }
+
+    @include tablet-mode {
+        background-color: inherit;
+        margin-right: 0;
+        margin-left: 0;
+
+        .white {
+            margin-right: -57px;
+            display: block;
+            z-index: 1;
+        }
+
+        .black {
+            display: none;
+        }
+    }
+
+    @include mobile-mode {
+        background-color: inherit;
+
+        .white {
+            margin: 0;
+            display: block;
+            z-index: 1;
+        }
+
+        .black {
+            display: none;
+        }
     }
 }
 
 .wrapper {
     width: 100%;
     height: 100%;
-    // @include tablet-mode {
-    //     // padding: 56px 40px;
-    // }
-
-    // @include mobile-mode {
-    //     // padding: 0 50px;
-    // }
 }
 
 .background {
