@@ -239,16 +239,17 @@ main {
             height: 995px;
             width: 100%;
             padding: 56px 40px 55px 40px;
+
+            .div-submit {
+                position: static;
+                width: 494px;
+                padding: 0;
+                margin: 0;
+                border: none;
+                box-shadow: none;
+            }
         }
 
-        .div-submit {
-            position: static;
-            width: 494px;
-            padding: 0;
-            margin: 0;
-            border: none;
-            box-shadow: none;
-        }
     }
 
     @include mobile-mode {
@@ -264,22 +265,23 @@ main {
             height: 1018px;
             width: 100%;
             padding: 30px 20px 32px 21px;
-        }
-
-        .div-submit {
-            position: static;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            border: none;
-            box-shadow: none;
-
-            button {
+            
+            .div-submit {
+                position: static;
+                flex-wrap: wrap;
+                justify-content: center;
                 width: 100%;
+                padding: 0;
+                margin: 0;
+                border: none;
+                box-shadow: none;
+    
+                button {
+                    width: 100%;
+                }
             }
         }
+
     }
 }
 

@@ -14,11 +14,15 @@
   border: solid 1px $light;
   padding: 0 16px 0 0;
 
+  &:hover {
+    border: solid 1px $grey;
+  }
+  
   &:focus {
     outline: 1px $purple;
     border-color: $purple;
     border-radius: 4px;
-    color: #424242;
+    color: $grey;
 
     &::placeholder {
       color: transparent;

@@ -63,6 +63,13 @@ input[type="tel"] {
   padding: 0 16px 0 0;
 }
 
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="tel"]:hover {
+  border: solid 1px #707070;
+}
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
@@ -70,7 +77,7 @@ input[type="tel"]:focus {
   outline: 1px #aa198d;
   border-color: #aa198d;
   border-radius: 4px;
-  color: #424242;
+  color: #707070;
 }
 
 input[type="text"]:focus::placeholder,
@@ -95,11 +102,15 @@ select {
   width: 496px;
 }
 
+select:hover {
+  border: solid 1px #707070;
+}
+
 select:focus {
   outline: 1px #aa198d;
   border-color: #aa198d;
   border-radius: 4px;
-  color: #424242;
+  color: #707070;
 }
 
 select:focus::placeholder {
@@ -115,6 +126,10 @@ select::placeholder {
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.14);
 }
 
+.select2-selection {
+  border: solid 1px #d6d6d6;
+}
+
 .select2-container--default .select2-selection--single {
   height: 48px;
   border-radius: 4px;
@@ -127,11 +142,15 @@ select::placeholder {
   position: relative;
 }
 
+.select2-container--default .select2-selection--single:hover {
+  border: solid 1px #707070;
+}
+
 .select2-container--default .select2-selection--single:focus {
   outline: 1px #aa198d;
   border-color: #aa198d;
   border-radius: 4px;
-  color: #424242;
+  color: #707070;
 }
 
 .select2-container--default .select2-selection--single:focus::placeholder {
@@ -385,7 +404,7 @@ main {
     width: 100%;
     padding: 56px 40px 55px 40px;
   }
-  .main-section .div-submit {
+  .main-section .main-content .div-submit {
     position: static;
     width: 494px;
     padding: 0;
@@ -410,7 +429,7 @@ main {
     width: 100%;
     padding: 30px 20px 32px 21px;
   }
-  .main-section .div-submit {
+  .main-section .main-content .div-submit {
     position: static;
     flex-wrap: wrap;
     justify-content: center;
@@ -420,7 +439,7 @@ main {
     border: none;
     box-shadow: none;
   }
-  .main-section .div-submit button {
+  .main-section .main-content .div-submit button {
     width: 100%;
   }
 }

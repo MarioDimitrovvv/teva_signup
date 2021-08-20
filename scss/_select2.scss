@@ -4,6 +4,10 @@
     
 }
 
+.select2-selection {
+  border: solid 1px $light;
+}
+
 .select2-container--default .select2-selection--single {
     @include input-style;
     padding: 23px;
