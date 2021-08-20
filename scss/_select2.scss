@@ -20,14 +20,13 @@
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
 }
 
 .select2-selection__arrow {
-    padding-top: 35px;
-    padding-left: 14px;
-    padding: auto;
+    padding-top: 45px;
+    padding-left: 34px;
 }
 
 #select2-job-container {

@@ -163,14 +163,13 @@ select::placeholder {
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
 }
 
 .select2-selection__arrow {
-  padding-top: 35px;
-  padding-left: 14px;
-  padding: auto;
+  padding-top: 45px;
+  padding-left: 34px;
 }
 
 #select2-job-container {
@@ -352,12 +351,48 @@ main {
   margin-bottom: 7px;
 }
 
-.main-section .main-content #info-image {
+.main-section .main-content #popup-field {
+  position: relative;
+}
+
+.main-section .main-content #popup-field #info-image {
   width: 24px;
   height: 24px;
   position: absolute;
   top: 0;
   margin: 0 50px 0 0;
+}
+
+.main-section .main-content #popup-field .popup {
+  position: absolute;
+  visibility: hidden;
+  text-align: initial;
+  margin-top: 30px;
+  width: 245px;
+  height: 140px;
+  padding: 4px 11px 8px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 18px 0 rgba(0, 0, 0, 0.34);
+  background-color: #424242;
+  line-height: 1.63;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.main-section .main-content #popup-field .popup::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 75%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555  transparent transparent transparent;
+  transform: rotate(180deg);
+}
+
+.main-section .main-content #popup-field .show {
+  visibility: visible;
 }
 
 .main-section .main-content .checkbox-div {

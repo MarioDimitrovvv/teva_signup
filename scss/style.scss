@@ -151,12 +151,49 @@ main {
             margin-bottom: 7px;
         }
 
-        #info-image {
-            width: 24px;
-            height: 24px;
-            position: absolute;
-            top: 0;
-            margin: 0 50px 0 0;
+        #popup-field{
+            position: relative;
+
+            #info-image {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 0;
+                margin: 0 50px 0 0;
+            }
+
+            .popup {
+                position: absolute;
+                visibility: hidden;
+                text-align: initial;
+                margin-top: 30px;
+                width: 245px;
+                height: 140px;
+                padding: 4px 11px 8px;
+                border-radius: 2px;
+                box-shadow: 1px 1px 18px 0 rgba(0, 0, 0, 0.34);
+                background-color: #424242;
+                line-height: 1.63;
+                color: $white;
+                z-index: 2;
+
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    left: 75%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #555  transparent transparent transparent;
+                    transform: rotate(180deg);
+                }
+            }
+
+            .show {
+                visibility: visible;
+            }
         }
 
         .checkbox-div {
@@ -200,26 +237,6 @@ main {
             //     }
             // }
         }
-
-        // @include tablet-mode {
-        //     padding: 0;
-        //     margin-top: 128px;
-        //     background-color: $white;
-        //     height: 995px; 
-        //     width: 100%;
-        //     padding: 56px 40px 55px 40px;
-        // }
-
-        // @include mobile-mode {
-        //     padding: 0;
-        //     margin-top: 193px;
-        //     background-color: $white;
-        //     height: 1018px;
-        //     // width: 375px;
-        //     // height: 100%;
-        //     width: 100%;
-        //     padding: 30px 20px 32px 21px;
-        // }
     }
 
     @include tablet-mode {
