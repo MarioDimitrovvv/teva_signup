@@ -30,8 +30,8 @@ main {
     }
     
     @include mobile-mode {
-        width: 425px;
-        margin-right: 250px;
+        height: 1211px;
+        width: 375px;
     }
 }
 
@@ -40,14 +40,13 @@ main {
     height: 898px;
     display: flex;
     justify-content: center;
-    // align-items: center;
 
     .tablet {
         display: none;
 
         @include tablet-mode {
-            margin: 0;
             display: block;
+            margin: 0;
             height: 1184px;
             width: 768px;
         }
@@ -57,11 +56,11 @@ main {
         display: none;
 
         @include mobile-mode {
-            display: inline-block;
-            position: absolute;
+            display: block;
             top: 0;
-            width: 375px;
+            position: absolute;
             height: 193px;
+            width: 375px;
         }
     }
 
@@ -99,17 +98,13 @@ main {
                     display: block;
                     width: 100%;
 
-                    @include mobile-mode {
-                        width: 316px;
-                    }
+                    
                 }
 
                 input {
                     width: 100%;
 
-                    @include mobile-mode {
-                        width: 316px;
-                    }
+                    
                 }
 
                 @include mobile-mode {
@@ -146,13 +141,9 @@ main {
                     }
 
                 }
-
-                @include mobile-mode {
-                    justify-content: space-between;
-                    width: 334px;
-                }
-
             }
+
+            
         }
 
         .description {
@@ -198,6 +189,21 @@ main {
                 border: none;
                 box-shadow: none;
             }
+
+            @include mobile-mode {
+                position: static;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                border: none;
+                box-shadow: none;
+
+                button {
+                    width: 100%;
+                }
+            }
         }
 
         @include tablet-mode {
@@ -210,12 +216,14 @@ main {
         }
 
         @include mobile-mode {
+            padding: 0;
             margin-top: 193px;
             background-color: $white;
+            height: 1018px;
+            // width: 375px;
+            // height: 100%;
             width: 100%;
-            height: 100%;
-            padding-left: 0;
-            padding-right: 0;
+            padding: 30px 20px 32px 21px;
         }
     }
 
@@ -227,22 +235,23 @@ main {
     }
 
     @include mobile-mode {
+        margin: 0 auto;
         justify-content: center;
+        height: 100%;
         width: 375px;
-        height: 1018px;
     }
 }
 
 .wrapper {
     width: 100%;
     height: 100%;
-    @include tablet-mode {
-        padding: 56px 40px;
-    }
+    // @include tablet-mode {
+    //     // padding: 56px 40px;
+    // }
 
-    @include mobile-mode {
-        padding: 0 20px;
-    }
+    // @include mobile-mode {
+    //     // padding: 0 50px;
+    // }
 }
 
 .background {
@@ -279,6 +288,13 @@ main {
         display: inline;
         position: absolute;
         top: 44px;
+    }
+
+    @include mobile-mode {
+        @include logo;
+        display: inline;
+        position: absolute;
+        top: 70px;
     }
 }
 

@@ -13,4 +13,5 @@ function formatState (opt) {
 
 export default $('#job').select2({
     templateResult: formatState,
+    width: '100%',
 })

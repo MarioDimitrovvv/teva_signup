@@ -1,7 +1,7 @@
 .select2-dropdown.select2-dropdown--below {
-    width: 496px;
     border: 1px solid $light;
     box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.14);
+    
 }
 
 .select2-container--default .select2-selection--single {
@@ -9,23 +9,21 @@
     padding: 23px;
     height: 100px;
     line-height: 300px;
-    width: 496px;
     font-size: 1.2em;
     position: relative;
     
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-    width: 478px;
     position: absolute;
     top: 0px;
     right: 0px;
-    
 }
 
 .select2-selection__arrow {
-    padding-top: 15px;
+    padding-top: 35px;
     padding-left: 14px;
+    padding: auto;
 }
 
 #select2-job-container {

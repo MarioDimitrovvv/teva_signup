@@ -111,7 +111,6 @@ select::placeholder {
 }
 
 .select2-dropdown.select2-dropdown--below {
-  width: 496px;
   border: 1px solid #d6d6d6;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.14);
 }
@@ -124,7 +123,6 @@ select::placeholder {
   padding: 23px;
   height: 100px;
   line-height: 300px;
-  width: 496px;
   font-size: 1.2em;
   position: relative;
 }
@@ -145,15 +143,15 @@ select::placeholder {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-  width: 478px;
   position: absolute;
   top: 0px;
   right: 0px;
 }
 
 .select2-selection__arrow {
-  padding-top: 15px;
+  padding-top: 35px;
   padding-left: 14px;
+  padding: auto;
 }
 
 #select2-job-container {
@@ -215,8 +213,8 @@ main {
 
 @media screen and (max-width: 425px) {
   main {
-    width: 425px;
-    margin-right: 250px;
+    height: 1211px;
+    width: 375px;
   }
 }
 
@@ -233,8 +231,8 @@ main {
 
 @media screen and (max-width: 1000px) and (min-width: 426px) {
   .main-section .tablet {
-    margin: 0;
     display: block;
+    margin: 0;
     height: 1184px;
     width: 768px;
   }
@@ -246,11 +244,11 @@ main {
 
 @media screen and (max-width: 425px) {
   .main-section .mobile {
-    display: inline-block;
-    position: absolute;
+    display: block;
     top: 0;
-    width: 375px;
+    position: absolute;
     height: 193px;
+    width: 375px;
   }
 }
 
@@ -286,20 +284,8 @@ main {
   width: 100%;
 }
 
-@media screen and (max-width: 425px) {
-  .main-section .main-content form > div label {
-    width: 316px;
-  }
-}
-
 .main-section .main-content form > div input {
   width: 100%;
-}
-
-@media screen and (max-width: 425px) {
-  .main-section .main-content form > div input {
-    width: 316px;
-  }
 }
 
 @media screen and (max-width: 425px) {
@@ -333,13 +319,6 @@ main {
 @media screen and (max-width: 425px) {
   .main-section .main-content form .row .name-field {
     width: 159px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .main-section .main-content form .row {
-    justify-content: space-between;
-    width: 334px;
   }
 }
 
@@ -401,6 +380,22 @@ main {
   }
 }
 
+@media screen and (max-width: 425px) {
+  .main-section .main-content .div-submit {
+    position: static;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .main-section .main-content .div-submit button {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1000px) and (min-width: 426px) {
   .main-section .main-content {
     padding: 0;
@@ -414,12 +409,12 @@ main {
 
 @media screen and (max-width: 425px) {
   .main-section .main-content {
+    padding: 0;
     margin-top: 193px;
     background-color: #ffffff;
+    height: 1018px;
     width: 100%;
-    height: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 30px 20px 32px 21px;
   }
 }
 
@@ -434,27 +429,16 @@ main {
 
 @media screen and (max-width: 425px) {
   .main-section {
+    margin: 0 auto;
     justify-content: center;
+    height: 100%;
     width: 375px;
-    height: 1018px;
   }
 }
 
 .wrapper {
   width: 100%;
   height: 100%;
-}
-
-@media screen and (max-width: 1000px) and (min-width: 426px) {
-  .wrapper {
-    padding: 56px 40px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .wrapper {
-    padding: 0 20px;
-  }
 }
 
 .background {
@@ -499,6 +483,16 @@ main {
     display: inline;
     position: absolute;
     top: 44px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .tablet-logo {
+    width: 147px;
+    height: 52px;
+    display: inline;
+    position: absolute;
+    top: 70px;
   }
 }
 
