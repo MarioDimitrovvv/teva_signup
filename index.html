@@ -33,20 +33,23 @@
                         <p class="subtitle">יש להירשם עם פרטים אישיים בשפה העברית. לאחר וידוא הפרטים תקבל לכתובת הדוא"ל
                             סיסמה לצורך כניסה לאתר</p>
                     </header>
-                    <form>
+                    <form id="register-form" autocomplete="off">
                         <div class="row">
                             <div class="name-field">
                                 <label for="firstName">שם פרטי</label>
                                 <input type="text" id="firstName" name="firstName" placeholder="שם פרטי" required>
+                                <p class="error-message">שם פרטי צריך להכיל רק אותיות</p>
                             </div>
                             <div class="name-field">
                                 <label for="secondName">שם משפחה</label>
                                 <input type="text" id="secondName" name="secondName" placeholder="שם משפחה" required>
+                                <p class="error-message">שם המשפחה צריך להכיל רק אותיות</p>
                             </div>
                         </div>
                         <div>
                             <label for="email">אימייל</label>
                             <input type="email" id="email" name="email" placeholder="כתובת מייל" required>
+                            <p class="error-message">הדוא"ל צריך להכיל כתובת דוא"ל חוקית.</p>
                         </div>
 
                         <div>
@@ -66,11 +69,13 @@
                             <p class="description">אנא הכניסו את מספר הרישיון ללא המספר שמופיע לפני המקף (1-) המופיע
                                 במספר
                                 הרישיון</p>
+                            <p class="error-message">מספר הרישיון צריך להכיל מספרים בלבד ואורכו יהיה באורך של 10 תווים בדיוק.</p>
                         </div>
 
                         <div>
-                            <label for="tel">טלפון נייד</label>
-                            <input type="tel" id="tel" name="tel" placeholder="טלפון נייד" required>
+                            <label for="phone">טלפון נייד</label>
+                            <input type="tel" id="phone" name="phone" placeholder="טלפון נייד" required>
+                            <p class="error-message">מספר הטלפון צריך להכיל מספרים בלבד.</p>
                         </div>
 
                         <div class="row">
@@ -82,21 +87,23 @@
                                     - לפחות אות אחת גדולה</span>
                                 <label for="password">סיסמה</label>
                                 <input type="password" id="password" name="password" placeholder="לפחות 8 תווים" required>
+                                <p class="error-message">הסיסמה חייבת להכיל 8 תווים לפחות</p>
                             </div>
                             <div class="name-field">
                                 <label for="repeatedPassword">אימות סיסמא</label>
                                 <input type="password" id="re-pass" name="repeatedPassword" placeholder="הקלידו שוב" required>
+                                <p class="error-message">סיסמאות לא תואמות</p>
                             </div>
                         </div>
 
                         <div>
                             <div class="checkbox-div">
-                                <input type="checkbox" name="med" id="med" required>
+                                <input type="checkbox" name="med" id="med" required checked>
                                 <label for="med">אני מצהיר.ה שאני רופא.ה / אח.ות / רוקח.ת</label>
                             </div>
 
                             <div class="checkbox-div">
-                                <input type="checkbox" name="terms" id="terms" required>
+                                <input type="checkbox" name="terms" id="terms" required checked>
                                 <label for="terms">אני מאשר.ת שקראתי את התקנון</label>
                             </div>
                         </div>

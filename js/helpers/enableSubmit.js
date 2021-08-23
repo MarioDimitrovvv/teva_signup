@@ -1,30 +1,26 @@
+import getInputs from './getInputs.js';
+
 let isJobSelected = false;
 
 const enableSubmitBtn = (e) => {
     const submitBtn = document.getElementById('submit-btn');
 
     let isEmpty = false;
-    const elements = [];
-
-    for (const el of e.currentTarget.elements) {
-        if(el.type !== 'submit') {
-            elements.push(el);
-        }
-    }
+    const elements = getInputs();
 
     elements.forEach(element => {
-        switch(element.type) {
+        switch (element.type) {
             case 'checkbox':
                 !element.checked ? isEmpty = true : null;
-            break;
+                break;
             case 'select-one':
                 $("#job").on("select2:select", function (e) {
                     isJobSelected = true;
                 });
-            break;
+                break;
             default:
                 element.value === '' ? isEmpty = true : null;
-            break;
+                break;
         }
     });
 
