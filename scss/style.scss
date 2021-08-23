@@ -213,29 +213,11 @@ main {
         .div-submit {
             @include submit-box;
 
-            // @include tablet-mode {
-            //     position: static;
-            //     width: 494px;
-            //     padding: 0;
-            //     margin: 0;
-            //     border: none;
-            //     box-shadow: none;
-            // }
-
-            // @include mobile-mode {
-            //     position: static;
-            //     flex-wrap: wrap;
-            //     justify-content: center;
-            //     width: 100%;
-            //     padding: 0;
-            //     margin: 0;
-            //     border: none;
-            //     box-shadow: none;
-
-            //     button {
-            //         width: 100%;
-            //     }
-            // }
+            button:disabled {
+                background-color: #eaeaea;
+                color: #bbbbbb;
+                cursor: not-allowed;
+            }
         }
     }
 

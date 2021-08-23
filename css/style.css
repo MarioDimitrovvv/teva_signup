@@ -37,7 +37,6 @@ button {
   width: 180px;
   height: 48px;
   border-radius: 29.2px;
-  background-color: #357875;
   border: none;
   color: #ffffff;
   font-size: 18px;
@@ -427,6 +426,12 @@ main {
   border-bottom: solid 1px #d6d6d6;
   background-color: #ffffff;
   z-index: 1;
+}
+
+.main-section .main-content .div-submit button:disabled {
+  background-color: #eaeaea;
+  color: #bbbbbb;
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 1000px) and (min-width: 426px) {

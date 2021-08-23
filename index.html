@@ -37,21 +37,21 @@
                         <div class="row">
                             <div class="name-field">
                                 <label for="firstName">שם פרטי</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="שם פרטי">
+                                <input type="text" id="firstName" name="firstName" placeholder="שם פרטי" required>
                             </div>
                             <div class="name-field">
                                 <label for="secondName">שם משפחה</label>
-                                <input type="text" id="secondName" name="secondName" placeholder="שם משפחה">
+                                <input type="text" id="secondName" name="secondName" placeholder="שם משפחה" required>
                             </div>
                         </div>
                         <div>
                             <label for="email">אימייל</label>
-                            <input type="email" id="email" name="email" placeholder="כתובת מייל">
+                            <input type="email" id="email" name="email" placeholder="כתובת מייל" required>
                         </div>
 
                         <div>
                             <label for="job">התמחות</label>
-                            <select id="job" name="job" data-placeholder="בחירה" class="js-example-basic-single">
+                            <select id="job" name="job" data-placeholder="בחירה" class="js-example-basic-single" required>
                                 <option></option>
                                 <option value="doctor" data-image="./img/jobs/doctor/icon-doctor.png">רופא.ה</option>
                                 <option value="nurse" data-image="./img/jobs/nurse/icon-nurse.png">אח.ות</option>
@@ -62,7 +62,7 @@
 
                         <div class="license">
                             <label for="license">מספר רשיון</label>
-                            <input type="text" id="license" name="license" placeholder="מספר הרשיון שמתחיל ב-0">
+                            <input type="text" id="license" name="license" placeholder="מספר הרשיון שמתחיל ב-0" required>
                             <p class="description">אנא הכניסו את מספר הרישיון ללא המספר שמופיע לפני המקף (1-) המופיע
                                 במספר
                                 הרישיון</p>
@@ -70,7 +70,7 @@
 
                         <div>
                             <label for="tel">טלפון נייד</label>
-                            <input type="tel" id="tel" name="tel" placeholder="טלפון נייד">
+                            <input type="tel" id="tel" name="tel" placeholder="טלפון נייד" required>
                         </div>
 
                         <div class="row">
@@ -80,29 +80,29 @@
                                     - 8 תווים לפחות<br/>
                                     - חייבת לכלול אותיות ומספרים<br/>
                                     - לפחות אות אחת גדולה</span>
-                                <label for="pass">סיסמה</label>
-                                <input type="password" id="pass" name="pass" placeholder="לפחות 8 תווים">
+                                <label for="password">סיסמה</label>
+                                <input type="password" id="password" name="password" placeholder="לפחות 8 תווים" required>
                             </div>
                             <div class="name-field">
-                                <label for="re-pass">אימות סיסמא</label>
-                                <input type="password" id="re-pass" name="re-pass" placeholder="הקלידו שוב">
+                                <label for="repeatedPassword">אימות סיסמא</label>
+                                <input type="password" id="re-pass" name="repeatedPassword" placeholder="הקלידו שוב" required>
                             </div>
                         </div>
 
                         <div>
                             <div class="checkbox-div">
-                                <input type="checkbox" name="med" id="med">
+                                <input type="checkbox" name="med" id="med" required>
                                 <label for="med">אני מצהיר.ה שאני רופא.ה / אח.ות / רוקח.ת</label>
                             </div>
 
                             <div class="checkbox-div">
-                                <input type="checkbox" name="terms" id="terms">
+                                <input type="checkbox" name="terms" id="terms" required>
                                 <label for="terms">אני מאשר.ת שקראתי את התקנון</label>
                             </div>
                         </div>
 
                         <div class="div-submit">
-                            <button id="submit-btn">רשמו אותי לאתר</button>
+                            <button id="submit-btn" disabled>רשמו אותי לאתר</button>
                             <p>כבר יש לך חשבון? <a href="#">כניסה לחשבון קיים</a></p>
                         </div>
                     </form>
