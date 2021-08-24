@@ -299,6 +299,7 @@ main {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 48px;
 }
 
@@ -462,6 +463,46 @@ main {
   background-color: #eaeaea;
   color: #bbbbbb;
   cursor: not-allowed;
+}
+
+.main-section .success {
+  display: none;
+  z-index: 1;
+  background-color: #ffffff;
+  height: 276px;
+  width: 479px;
+  margin-top: 221px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-section .success p {
+  margin: 0;
+  max-width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 426px) {
+  .main-section .success {
+    height: 582px;
+    width: 574px;
+    padding-top: 114px;
+    padding: 114px 47px 0 47px;
+    margin-top: 268px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main-section .success {
+    padding: 0 10px;
+  }
+  .main-section .success h1 {
+    font-size: 28px;
+  }
+  .main-section .success p {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 1000px) and (min-width: 426px) {

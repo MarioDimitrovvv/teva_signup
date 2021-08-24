@@ -15,7 +15,7 @@ function validateInputs(e) {
     e.preventDefault();
 
     var elements = getInputs();
-    console.log(elements);
+    var errors = [];
 
     var firstName = elements[0];
     var secondName = elements[1];
@@ -26,32 +26,36 @@ function validateInputs(e) {
     var repeatedPassword = elements[7];
 
     if (!firstName.value.match(/^[A-Za-z]+$/)) {
-        showError(firstName);
+        errors.push(firstName);
     }
 
     if (!secondName.value.match(/^[A-Za-z]+$/)) {
-        showError(secondName);
+        errors.push(secondName);
     }
 
     if (!email.value.match(/(?!.*\.\.)(^[^\.][^@\s]+@[^@\s]+\.[^@\s\.]+$)/)) {
-        showError(email);
+        errors.push(email);
     }
 
     if (!license.value.match(/^(\d){10}$/)) {
-        showError(license);
+        errors.push(license);
     }
 
     if (!phone.value.match(/^(\d)+$/)) {
-        showError(phone);
+        errors.push(phone);
     }
 
     if (!password.value.match(/^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/)) {
-        showError(password);
+        errors.push(password);
     }
 
     if (password.value !== repeatedPassword.value) {
-        showError(repeatedPassword);
+        errors.push(repeatedPassword);
     }
+
+    if (errors.length > 0) return showError(errors);
+
+    return showSuccess(elements);
 }
 
 function hideError(e) {
@@ -60,26 +64,28 @@ function hideError(e) {
     var passImg = parentElement.querySelector('.pass-icon');
     if (parentElement && parentElement.classList.contains('error')) {
         passImg ? passImg.style.left = '14px' : null;
-        // Remove may not work
         element.parentNode.querySelector('.error-message').classList.remove('show-error');
         element.parentElement.classList.remove('error');
     }
 }
 
-function showError(element) {
-    var parentElement = element.parentNode;
-    var passImg = parentElement.querySelector('.pass-icon')
-    passImg ? passImg.style.left = '30px' : null;
-    // Add may not work
-    parentElement.querySelector('.error-message').classList.add('show-error');
-    parentElement.classList.add('error');
+function showError(errors) {
+    for (let index = 0; index < errors.length; index++) {
+        var element = errors[index];
+
+        var parentElement = element.parentNode;
+        var passImg = parentElement.querySelector('.pass-icon')
+        passImg ? passImg.style.left = '30px' : null;
+        parentElement.querySelector('.error-message').classList.add('show-error');
+        parentElement.classList.add('error');
+    }
 }
 
 function showPassword(e) {
     var imageSrc = e.target.getAttribute('src');
     var parentElement = e.target.parentElement;
     var input = parentElement.querySelector('input');
-    
+
     if (imageSrc.indexOf('show') !== -1) {
         e.target.setAttribute('src', './img/password/icon-hide.png');
         e.target.setAttribute('alt', 'icon-hide');
@@ -89,4 +95,11 @@ function showPassword(e) {
         e.target.setAttribute('alt', 'icon-show');
         input.type = 'password';
     }
+}
+
+function showSuccess(userInfo) {
+    document.querySelector('.main-content').style.display = 'none';
+    document.querySelector('.success').style.display = 'flex';
+    console.log(userInfo[2].value);
+    document.body.innerHTML = document.body.innerHTML.replace('moshe@gmail.com', userInfo[2].value);
 }

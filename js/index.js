@@ -7,7 +7,6 @@ for (var i = 0; i < passIcons.length; i++) {
     passwordImage.addEventListener('click', showPassword);
 }
 
-// May be a problem
 infoImage.addEventListener('click', function() {document.querySelector('.popup').classList.toggle('show')});
 
 form.addEventListener('keyup', enableSubmitBtn);

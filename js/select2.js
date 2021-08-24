@@ -4,7 +4,7 @@ function formatState (opt) {
     if(!optimage){
        return opt.text.toUpperCase();
     } else {                    
-        var $opt = $("<span><img id='logoo' src='" + optimage + " width='24px' /> <span id='job-description'>" + opt.text.toUpperCase() + " </span> </span>");
+        var $opt = $("<span><img id='logoo' src=" + optimage + " width='24px' /> <span id='job-description'>" + opt.text.toUpperCase() + " </span></span>");
         return $opt;
     }
 };
