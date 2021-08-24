@@ -12,7 +12,6 @@ const getInputs = () => {
 const validateInputs = (e) => {
     e.preventDefault();
     const elements = getInputs();
-    console.log(elements);
 
     const [
         firstName,
@@ -77,7 +76,7 @@ const showPassword = (e) => {
     const imageSrc = e.target.getAttribute('src');
     const parentElement = e.target.parentElement;
     const input = parentElement.querySelector('input');
-    
+
     if (imageSrc.includes('show')) {
         e.target.setAttribute('src', './img/password/icon-hide.png');
         e.target.setAttribute('alt', 'icon-hide');
@@ -89,7 +88,7 @@ const showPassword = (e) => {
     }
 }
 
-export {
+export default {
     validateInputs,
     hideError,
     getInputs,
