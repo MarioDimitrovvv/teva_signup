@@ -131,6 +131,7 @@ main {
 
                     input {
                         width: 100%;
+                        padding: 13px 16px 13px 0;
                     }
 
                     @include mobile-mode {
@@ -385,7 +386,6 @@ main {
         top: 70px;
     }
 }
-
 
 section {
     width: 50%;

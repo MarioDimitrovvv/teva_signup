@@ -1,4 +1,4 @@
-import getInputs from './getInputs.js';
+import { getInputs } from './inputHelper.js';
 
 let isJobSelected = false;
 
