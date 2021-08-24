@@ -1,29 +1,29 @@
-const getInputs = () => {
-    const elements = [];
+function getInputs() {
+    var elements = [];
+    var form = document.getElementById('register-form');
 
-    for (const el of document.getElementById('register-form')) {
-        if (el.type !== 'submit') {
-            elements.push(el);
+    for (var i = 0; i < form.length; i++) {
+        var element = form[i];
+        if (element.type !== 'submit') {
+            elements.push(element);
         }
     }
     return elements;
 }
 
-const validateInputs = (e) => {
+function validateInputs(e) {
     e.preventDefault();
-    const elements = getInputs();
+
+    var elements = getInputs();
     console.log(elements);
 
-    const [
-        firstName,
-        secondName,
-        email,
-        select,
-        license,
-        phone,
-        password,
-        repeatedPassword
-    ] = elements;
+    var firstName = elements[0];
+    var secondName = elements[1];
+    var email = elements[2];
+    var license = elements[4];
+    var phone = elements[5];
+    var password = elements[6];
+    var repeatedPassword = elements[7];
 
     if (!firstName.value.match(/^[A-Za-z]+$/)) {
         showError(firstName);
@@ -54,31 +54,33 @@ const validateInputs = (e) => {
     }
 }
 
-const hideError = (e) => {
-    const element = e.target;
-    const parentElement = element.parentNode;
-    const passImg = parentElement.querySelector('.pass-icon');
+function hideError(e) {
+    var element = e.target;
+    var parentElement = element.parentNode;
+    var passImg = parentElement.querySelector('.pass-icon');
     if (parentElement && parentElement.classList.contains('error')) {
         passImg ? passImg.style.left = '14px' : null;
+        // Remove may not work
         element.parentNode.querySelector('.error-message').classList.remove('show-error');
         element.parentElement.classList.remove('error');
     }
 }
 
-const showError = (element) => {
-    const parentElement = element.parentNode;
-    const passImg = parentElement.querySelector('.pass-icon')
+function showError(element) {
+    var parentElement = element.parentNode;
+    var passImg = parentElement.querySelector('.pass-icon')
     passImg ? passImg.style.left = '30px' : null;
+    // Add may not work
     parentElement.querySelector('.error-message').classList.add('show-error');
     parentElement.classList.add('error');
 }
 
-const showPassword = (e) => {
-    const imageSrc = e.target.getAttribute('src');
-    const parentElement = e.target.parentElement;
-    const input = parentElement.querySelector('input');
+function showPassword(e) {
+    var imageSrc = e.target.getAttribute('src');
+    var parentElement = e.target.parentElement;
+    var input = parentElement.querySelector('input');
     
-    if (imageSrc.includes('show')) {
+    if (imageSrc.indexOf('show') !== -1) {
         e.target.setAttribute('src', './img/password/icon-hide.png');
         e.target.setAttribute('alt', 'icon-hide');
         input.type = 'text';
@@ -87,11 +89,4 @@ const showPassword = (e) => {
         e.target.setAttribute('alt', 'icon-show');
         input.type = 'password';
     }
-}
-
-export {
-    validateInputs,
-    hideError,
-    getInputs,
-    showPassword
 }

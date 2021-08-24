@@ -1,14 +1,13 @@
-import { getInputs } from './inputHelper.js';
+var isJobSelected = false;
 
-let isJobSelected = false;
+function enableSubmitBtn(e) {
+    var submitBtn = document.getElementById('submit-btn');
 
-const enableSubmitBtn = (e) => {
-    const submitBtn = document.getElementById('submit-btn');
+    var isEmpty = false;
+    var elements = getInputs();
 
-    let isEmpty = false;
-    const elements = getInputs();
-
-    elements.forEach(element => {
+    for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
         switch (element.type) {
             case 'checkbox':
                 !element.checked ? isEmpty = true : null;
@@ -22,9 +21,7 @@ const enableSubmitBtn = (e) => {
                 element.value === '' ? isEmpty = true : null;
                 break;
         }
-    });
+    }
 
     !isEmpty && isJobSelected ? submitBtn.removeAttribute('disabled') : submitBtn.setAttribute('disabled', 'disabled');
 }
-
-export default enableSubmitBtn;

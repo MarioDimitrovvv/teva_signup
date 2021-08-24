@@ -1,14 +1,14 @@
-import './select2.js';
-import { validateInputs, hideError, showPassword } from './helpers/inputHelper.js';
-import enableSubmitBtn from './helpers/enableSubmit.js';
+var form = document.querySelector('form');
+var infoImage = document.getElementById('info-image');
 
-const form = document.querySelector('form');
-const infoImage = document.getElementById('info-image');
+var passIcons = document.querySelectorAll('.pass-icon');
+for (var i = 0; i < passIcons.length; i++) {
+    var passwordImage = passIcons[i];
+    passwordImage.addEventListener('click', showPassword);
+}
 
-const passIcons = document.querySelectorAll('.pass-icon');
-passIcons.forEach(element => element.addEventListener('click', showPassword));
-
-infoImage.addEventListener('click', () => document.querySelector('.popup').classList.toggle('show'));
+// May be a problem
+infoImage.addEventListener('click', function() {document.querySelector('.popup').classList.toggle('show')});
 
 form.addEventListener('keyup', enableSubmitBtn);
 form.addEventListener('change', enableSubmitBtn);
