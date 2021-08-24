@@ -2,6 +2,7 @@
 @import 'utils';
 @import 'typography';
 @import 'select2';
+@import 'error';
 
 html {
     box-sizing: border-box;
@@ -152,10 +153,10 @@ main {
             margin-bottom: 7px;
         }
 
-        #popup-field{
+        .password-div{
             position: relative;
-
             #info-image {
+                cursor: pointer;
                 width: 24px;
                 height: 24px;
                 position: absolute;
@@ -197,6 +198,13 @@ main {
             }
         }
 
+        .pass-icon {
+            position: absolute;
+            left: 14px;
+            bottom: 30px;
+            cursor: pointer;
+        }
+
         .checkbox-div {
             margin-top: 11px;
             display: flex;
@@ -211,7 +219,7 @@ main {
             }
         }
 
-        .div-submit {
+        .submit-div {
             @include submit-box;
 
             button:disabled {
@@ -238,7 +246,7 @@ main {
             width: 100%;
             padding: 56px 40px 55px 40px;
 
-            .div-submit {
+            .submit-div {
                 position: static;
                 width: 494px;
                 padding: 0;
@@ -264,7 +272,7 @@ main {
             width: 100%;
             padding: 30px 20px 32px 21px;
             
-            .div-submit {
+            .submit-div {
                 position: static;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -378,26 +386,6 @@ main {
     }
 }
 
-.error {
-    input{
-        background-image: url('../img/others/icon-error.png');
-        background-size: 24px 24px;
-        background-repeat: no-repeat;
-        background-position: 4% 50%;
-        background-color: rgba(255, 58, 0, 0.08);
-    }
-}
-
-.error-message {
-    display: none;
-    font-size: 12px;
-    margin: 0;
-    color: $red;
-}
-
-.show-error {
-    display: inline;
-}
 
 section {
     width: 50%;

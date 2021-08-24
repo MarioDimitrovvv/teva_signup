@@ -203,6 +203,25 @@ select::placeholder {
   border: none;
 }
 
+.error input {
+  background-image: url("../img/others/icon-error.png");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: 4% 50%;
+  background-color: rgba(255, 58, 0, 0.08);
+}
+
+.error-message {
+  display: none;
+  font-size: 12px;
+  margin: 0;
+  color: #ff3a00;
+}
+
+.show-error {
+  display: inline;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -355,11 +374,12 @@ main {
   margin-bottom: 7px;
 }
 
-.main-section .main-content #popup-field {
+.main-section .main-content .password-div {
   position: relative;
 }
 
-.main-section .main-content #popup-field #info-image {
+.main-section .main-content .password-div #info-image {
+  cursor: pointer;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -367,7 +387,7 @@ main {
   margin: 0 50px 0 0;
 }
 
-.main-section .main-content #popup-field .popup {
+.main-section .main-content .password-div .popup {
   position: absolute;
   visibility: hidden;
   text-align: initial;
@@ -383,7 +403,7 @@ main {
   z-index: 2;
 }
 
-.main-section .main-content #popup-field .popup::after {
+.main-section .main-content .password-div .popup::after {
   content: '';
   position: absolute;
   top: -10px;
@@ -395,8 +415,15 @@ main {
   transform: rotate(180deg);
 }
 
-.main-section .main-content #popup-field .show {
+.main-section .main-content .password-div .show {
   visibility: visible;
+}
+
+.main-section .main-content .pass-icon {
+  position: absolute;
+  left: 14px;
+  bottom: 30px;
+  cursor: pointer;
 }
 
 .main-section .main-content .checkbox-div {
@@ -412,7 +439,7 @@ main {
   margin-left: 11px;
 }
 
-.main-section .main-content .div-submit {
+.main-section .main-content .submit-div {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -430,7 +457,7 @@ main {
   z-index: 1;
 }
 
-.main-section .main-content .div-submit button:disabled {
+.main-section .main-content .submit-div button:disabled {
   background-color: #eaeaea;
   color: #bbbbbb;
   cursor: not-allowed;
@@ -451,7 +478,7 @@ main {
     width: 100%;
     padding: 56px 40px 55px 40px;
   }
-  .main-section .main-content .div-submit {
+  .main-section .main-content .submit-div {
     position: static;
     width: 494px;
     padding: 0;
@@ -476,7 +503,7 @@ main {
     width: 100%;
     padding: 30px 20px 32px 21px;
   }
-  .main-section .main-content .div-submit {
+  .main-section .main-content .submit-div {
     position: static;
     flex-wrap: wrap;
     justify-content: center;
@@ -486,7 +513,7 @@ main {
     border: none;
     box-shadow: none;
   }
-  .main-section .main-content .div-submit button {
+  .main-section .main-content .submit-div button {
     width: 100%;
   }
 }
@@ -595,25 +622,6 @@ main {
     position: absolute;
     top: 70px;
   }
-}
-
-.error input {
-  background-image: url("../img/others/icon-error.png");
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  background-position: 4% 50%;
-  background-color: rgba(255, 58, 0, 0.08);
-}
-
-.error-message {
-  display: none;
-  font-size: 12px;
-  margin: 0;
-  color: #ff3a00;
-}
-
-.show-error {
-  display: inline;
 }
 
 section {
