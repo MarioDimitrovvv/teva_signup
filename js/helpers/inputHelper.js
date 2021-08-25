@@ -98,8 +98,10 @@ function showPassword(e) {
 }
 
 function showSuccess(userInfo) {
-    document.querySelector('.main-content').style.display = 'none';
-    document.querySelector('.success').style.display = 'flex';
-    console.log(userInfo[2].value);
-    document.body.innerHTML = document.body.innerHTML.replace('moshe@gmail.com', userInfo[2].value);
+    setTimeout(function () {
+        document.querySelector('.main-content').style.display = 'none';
+        document.querySelector('.success').style.display = 'flex';
+        console.log(userInfo[2].value);
+        document.body.innerHTML = document.body.innerHTML.replace('moshe@gmail.com', userInfo[2].value);
+    }, 1000)
 }

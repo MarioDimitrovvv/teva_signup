@@ -1,8 +1,12 @@
 var isJobSelected = false;
 
+$("#job").on("select2:select", function (e) {
+    enableSubmitBtn('selected');
+});
+
 function enableSubmitBtn(e) {
     var submitBtn = document.getElementById('submit-btn');
-
+    console.log('activate');
     var isEmpty = false;
     var elements = getInputs();
 
@@ -13,9 +17,7 @@ function enableSubmitBtn(e) {
                 !element.checked ? isEmpty = true : null;
                 break;
             case 'select-one':
-                $("#job").on("select2:select", function (e) {
-                    isJobSelected = true;
-                });
+                e === 'selected' ? isJobSelected = true : null;
                 break;
             default:
                 element.value === '' ? isEmpty = true : null;
