@@ -123,45 +123,22 @@ select::placeholder {
   color: #d6d6d6;
 }
 
+#job + span {
+  border: solid 1px #d6d6d6;
+  border-radius: 4px;
+}
+
 .select2-dropdown.select2-dropdown--below {
   border: 1px solid #d6d6d6;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.14);
 }
 
-.select2-selection {
-  border: solid 1px #d6d6d6;
-}
-
 .select2-container--default .select2-selection--single {
-  height: 48px;
-  border-radius: 4px;
-  border: solid 1px #d6d6d6;
-  padding: 0 16px 0 0;
   padding: 23px;
   height: 100px;
   line-height: 300px;
   font-size: 1.2em;
   position: relative;
-}
-
-.select2-container--default .select2-selection--single:hover {
-  border: solid 1px #707070;
-}
-
-.select2-container--default .select2-selection--single:focus {
-  outline: 1px #aa198d;
-  transition: all 0.3s ease;
-  border-color: #aa198d;
-  border-radius: 4px;
-  color: #707070;
-}
-
-.select2-container--default .select2-selection--single:focus::placeholder {
-  color: transparent;
-}
-
-.select2-container--default .select2-selection--single::placeholder {
-  color: #d6d6d6;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -182,6 +159,10 @@ select::placeholder {
 
 #select2-job-container * {
   color: #d6d6d6;
+}
+
+#register-form > div:nth-child(3) > span > span.selection > span {
+  border: none;
 }
 
 .select2-results__options {

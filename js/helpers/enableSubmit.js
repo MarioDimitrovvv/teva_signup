@@ -6,7 +6,6 @@ $("#job").on("select2:select", function (e) {
 
 function enableSubmitBtn(e) {
     var submitBtn = document.getElementById('submit-btn');
-    console.log('activate');
     var isEmpty = false;
     var elements = getInputs();
 
