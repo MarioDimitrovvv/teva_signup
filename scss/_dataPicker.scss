@@ -1,0 +1,19 @@
+span.flatpickr-day.selected {
+    background-color: $purple;
+}
+
+
+span.flatpickr-day.today {
+    border: none;
+    &::after {
+        content: " ";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        bottom: 3px;
+        left: calc(50% - 1.5px);
+        display: block;
+        background: $purple;
+    }
+}

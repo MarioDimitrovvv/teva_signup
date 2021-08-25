@@ -161,6 +161,10 @@ select::placeholder {
   color: #d6d6d6;
 }
 
+.select2-results__option--selected {
+  background-color: red;
+}
+
 #register-form > div:nth-child(3) > span > span.selection > span {
   border: none;
 }
@@ -177,6 +181,21 @@ select::placeholder {
 
 .select2-results__options li img {
   margin: 0 5px -8px 10px;
+}
+
+.select2-results__options li.select2-results__option--selected::before {
+  content: '';
+  position: absolute;
+  background-color: #aa198d;
+  width: 3px;
+  height: 40px;
+  z-index: 1;
+  right: 0;
+  margin-top: -10px;
+}
+
+.select2-results__options li.select2-results__option--highlighted {
+  background-color: #707070;
 }
 
 .select2-search__field {
@@ -201,6 +220,26 @@ select::placeholder {
 
 .show-error {
   display: inline;
+}
+
+span.flatpickr-day.selected {
+  background-color: #aa198d;
+}
+
+span.flatpickr-day.today {
+  border: none;
+}
+
+span.flatpickr-day.today::after {
+  content: " ";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  bottom: 3px;
+  left: calc(50% - 1.5px);
+  display: block;
+  background: #aa198d;
 }
 
 html {

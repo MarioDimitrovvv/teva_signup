@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" type="text/css" href="./css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/ie.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -52,7 +54,7 @@
                             <p class="error-message">הדוא"ל צריך להכיל כתובת דוא"ל חוקית.</p>
                         </div>
 
-                        <div>
+                        <!-- <div>
                             <label for="job">התמחות</label>
                             <select id="job" name="job" data-placeholder="בחירה" class="js-example-basic-single"
                                 required>
@@ -62,8 +64,13 @@
                                 <option value="pharmacist" data-image="./img/jobs/pharmacist/icon-pharmacist.png">רוקח.ת
                                 </option>
                             </select>
-                        </div>
+                        </div> -->
 
+                        <div class="data-picker">
+                            <label for="calendar">תאריך לידה</label>
+                            <input type="text" id="calendar" placeholder="תאריך לידה">
+                          </div>
+                        
                         <div class="license">
                             <label for="license">מספר רשיון</label>
                             <input type="text" id="license" name="license" placeholder="מספר הרשיון שמתחיל ב-0"
@@ -138,6 +145,10 @@
         </section>
     </main>
 
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/l10n/he.js"></script>
+
+    <script src="./js/dataPicker.js"></script>
     <script src="./js/select2.js"></script>
     <script src="./js/helpers/enableSubmit.js"></script>
     <script src="./js/helpers/inputHelper.js"></script>
